@@ -17,7 +17,7 @@ function createWindow () {
     }
 })
 
-    win.loadFile('src/main-page.html')
+    win.loadFile('src/frontend/main-page/main-page.html')
     win.setBackgroundColor('#343B48')
 
     //// CLOSE APP
