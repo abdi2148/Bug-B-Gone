@@ -6,6 +6,11 @@ admin.initializeApp({
 
 const db = admin.firestore();
 
+async function createBug(data){
+    const dataRef = db.collection('bugs');
+    
+}
+
 async function getAllBugs(){
     const dataRef = db.collection('bugs');
     const snapshot = await dataRef.get();
