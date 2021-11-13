@@ -64,10 +64,13 @@
   color: #5B9494;
 }
 .sidebar .nav-links li a .links_name{
-  color: #fff;
+  color: darkslategray;
   font-size: 15px;
   font-weight: 400;
   white-space: nowrap;
+  font-size: larger;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: normal;
 }
 .sidebar .nav-links .log_out{
   position: absolute;
@@ -76,7 +79,8 @@
 }
 .home-section{
   position: relative;
-  background: rgb(52, 77, 77);
+  background-color: red;
+background: url('https://api.iconify.design/clarity/bug-line.svg?rotate=90deg') no-repeat center center / contain;
   min-height: 100vh;
   width: calc(100% - 240px);
   left: 240px;
@@ -89,7 +93,7 @@
 .home-section nav{
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  height: 91px;
   background: rgb(26, 43, 43);
   display: flex;
   align-items: center;
@@ -110,10 +114,12 @@
   align-items: center;
   font-size: 24px;
   font-weight: 500;
+  
 }
 nav .sidebar-button i{
   font-size: 35px;
   margin-right: 10px;
+  
 }
 .home-section nav .search-box{
   position: relative;
