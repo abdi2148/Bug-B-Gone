@@ -116,6 +116,39 @@ background: url('https://api.iconify.design/clarity/bug-line.svg?rotate=90deg') 
   font-weight: 500;
   
 }
+.titleBarBtns > .topBtn{
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.2s;
+  cursor: pointer;
+
+
+}
+.titleBarBtns > .topBtn:hover{
+  background-color: rgb(65, 109, 109);
+}
+.titleBarBtns > .topBtn:active{
+  background-color: #4F9FEE;
+}
+.titleBarBtns > .minimizeBtn{
+  padding-left: 5px;
+  position: relative;
+  background-image: url('../main-page/icons/icon_minimize.png');
+}
+.titleBarBtns > .maximizeBtn{
+  background-image: url('../main-page/icons/icon_maximize.png');
+}
+.titleBarBtns > .restoreBtn{
+  background-image: url('../main-page/icons/icon_restore.png');
+}
+.titleBarBtns > .closeBtn{
+  background-image: url('../main-page/icons/icon_close.png');
+}
 nav .sidebar-button i{
   font-size: 35px;
   margin-right: 10px;
