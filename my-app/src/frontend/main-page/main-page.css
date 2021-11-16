@@ -55,7 +55,7 @@
   background: rgb(0, 0, 0);
 }
 .sidebar .nav-links li a:hover{
-  background: darkslategrey;
+  background: rgb(75, 230, 230);
 }
 .sidebar .nav-links li i{
   min-width: 60px;
@@ -80,7 +80,7 @@
 .home-section{
   position: relative;
   background-color: red;
-background: url('https://api.iconify.design/clarity/bug-line.svg?rotate=90deg') no-repeat center center / contain;
+  background: url('https://api.iconify.design/clarity/bug-line.svg?color=%231a2b2b&rotate=90deg') no-repeat center center / contain;
   min-height: 100vh;
   width: calc(100% - 240px);
   left: 240px;
