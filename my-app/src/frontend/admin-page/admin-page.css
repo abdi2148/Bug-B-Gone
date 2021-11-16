@@ -225,6 +225,7 @@ nav .profile-details i{
   flex-wrap: wrap;
   padding: 0 20px;
   margin-bottom: 26px;
+  opacity: 90%;
 }
 .overview-boxes .box{
   display: flex;
@@ -298,6 +299,7 @@ nav .profile-details i{
 .home-content .sales-boxes{
   display: flex;
   justify-content: space-between;
+  opacity: 90%;
   /* padding: 0 20px; */
 }
 
