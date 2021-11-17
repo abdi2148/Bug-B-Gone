@@ -80,11 +80,12 @@
 .home-section{
   position: relative;
   background-color: red;
-background: url('https://api.iconify.design/clarity/bug-line.svg?rotate=90deg') no-repeat center center / contain;
+  background: url('https://api.iconify.design/clarity/bug-line.svg?color=%231a2b2b&rotate=90deg') no-repeat center center / contain;
   min-height: 100vh;
   width: calc(100% - 240px);
   left: 240px;
   transition: all 0.5s ease;
+  
 }
 .sidebar.active ~ .home-section{
   width: calc(100% - 60px);
@@ -225,6 +226,7 @@ nav .profile-details i{
   flex-wrap: wrap;
   padding: 0 20px;
   margin-bottom: 26px;
+  opacity: 90%;
 }
 .overview-boxes .box{
   display: flex;
@@ -298,6 +300,8 @@ nav .profile-details i{
 .home-content .sales-boxes{
   display: flex;
   justify-content: space-between;
+  opacity: 90%;
+
   /* padding: 0 20px; */
 }
 
