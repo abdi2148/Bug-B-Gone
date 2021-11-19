@@ -55,7 +55,7 @@
   background: rgb(0, 0, 0);
 }
 .sidebar .nav-links li a:hover{
-  background: rgb(75, 230, 230);
+  background: darkslategrey;
 }
 .sidebar .nav-links li i{
   min-width: 60px;
@@ -85,6 +85,7 @@
   width: calc(100% - 240px);
   left: 240px;
   transition: all 0.5s ease;
+  
 }
 .sidebar.active ~ .home-section{
   width: calc(100% - 60px);
@@ -114,7 +115,7 @@
   align-items: center;
   font-size: 24px;
   font-weight: 500;
-
+  
 }
 .titleBarBtns > .topBtn{
   width: 40px;
@@ -127,7 +128,7 @@
   transition: 0.2s;
   cursor: pointer;
 
-  
+
 }
 .titleBarBtns > .topBtn:hover{
   background-color: rgb(65, 109, 109);
@@ -155,12 +156,11 @@ nav .sidebar-button i{
   
 }
 .home-section nav .search-box{
-  position: absolute; left: 250px;
+  position: relative;
   height: 50px;
-  max-width: 450px;
+  max-width: 550px;
   width: 100%;
-  margin: 0 20px;  
-  
+  margin: 0 20px;
   
 }
 nav .search-box input{
@@ -197,7 +197,6 @@ nav .search-box .bx-search{
   height: 50px;
   min-width: 190px;
   padding: 0 15px 0 2px;
-  position: absolute; right: 150px
 }
 nav .profile-details img{
   height: 40px;
@@ -302,7 +301,8 @@ nav .profile-details i{
   display: flex;
   justify-content: space-between;
   opacity: 90%;
-  
+
+  /* padding: 0 20px; */
 }
 
 /* left box */
