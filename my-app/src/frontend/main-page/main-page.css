@@ -55,7 +55,7 @@
   background: rgb(0, 0, 0);
 }
 .sidebar .nav-links li a:hover{
-  background: rgb(75, 230, 230);
+  background: darkslategrey;
 }
 .sidebar .nav-links li i{
   min-width: 60px;
