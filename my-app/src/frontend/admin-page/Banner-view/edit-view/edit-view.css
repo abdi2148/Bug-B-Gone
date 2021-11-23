@@ -85,7 +85,6 @@
   width: calc(100% - 240px);
   left: 240px;
   transition: all 0.5s ease;
-  
 }
 .sidebar.active ~ .home-section{
   width: calc(100% - 60px);
@@ -115,7 +114,7 @@
   align-items: center;
   font-size: 24px;
   font-weight: 500;
-  
+
 }
 .titleBarBtns > .topBtn{
   width: 40px;
@@ -128,7 +127,7 @@
   transition: 0.2s;
   cursor: pointer;
 
-
+  
 }
 .titleBarBtns > .topBtn:hover{
   background-color: rgb(65, 109, 109);
@@ -156,12 +155,12 @@ nav .sidebar-button i{
   
 }
 .home-section nav .search-box{
-  position: relative;
+  position: absolute; left: 270px;
   height: 50px;
-  max-width: 550px;
+  max-width: 350px;
   width: 100%;
-  margin: 0 20px;
-  
+  margin: 0 20px;  
+    
 }
 nav .search-box input{
   height: 100%;
@@ -172,6 +171,8 @@ nav .search-box input{
   border-radius: 6px;
   font-size: 18px;
   padding: 0 15px;
+  color: #5B9494;
+  font-weight: 800;
 }
 nav .search-box .bx-search{
   position: absolute;
@@ -197,6 +198,7 @@ nav .search-box .bx-search{
   height: 50px;
   min-width: 190px;
   padding: 0 15px 0 2px;
+  position: absolute; right: 150px
 }
 nav .profile-details img{
   height: 40px;
@@ -210,10 +212,12 @@ nav .profile-details .admin_name{
   color: #5B9494;
   margin: 0 10px;
   white-space: nowrap;
+  position: absolute; 
 }
 nav .profile-details i{
   font-size: 25px;
   color: #5B9494;
+  position: absolute; right:0px;
 }
 .home-section .home-content{
   position: relative;
@@ -301,8 +305,7 @@ nav .profile-details i{
   display: flex;
   justify-content: space-between;
   opacity: 90%;
-
-  /* padding: 0 20px; */
+  
 }
 
 /* left box */
