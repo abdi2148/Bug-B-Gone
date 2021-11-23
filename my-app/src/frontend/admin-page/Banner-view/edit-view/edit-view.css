@@ -131,6 +131,7 @@
 }
 .titleBarBtns > .topBtn:hover{
   background-color: rgb(65, 109, 109);
+  
 }
 .titleBarBtns > .topBtn:active{
   background-color: #4F9FEE;
@@ -138,16 +139,16 @@
 .titleBarBtns > .minimizeBtn{
   padding-left: 5px;
   position: relative;
-  background-image: url('../main-page/icons/icon_minimize.png');
+  background-image: url('../edit-view/icons/icon_minimize.png');
 }
 .titleBarBtns > .maximizeBtn{
-  background-image: url('../main-page/icons/icon_maximize.png');
+  background-image: url('../edit-view/icons/icon_maximize.png');
 }
 .titleBarBtns > .restoreBtn{
-  background-image: url('../main-page/icons/icon_restore.png');
+  background-image: url('../edit-view/icons/icon_restore.png');
 }
 .titleBarBtns > .closeBtn{
-  background-image: url('../main-page/icons/icon_close.png');
+  background-image: url('../edit-view/icons/icon_close.png');
 }
 nav .sidebar-button i{
   font-size: 35px;
@@ -305,7 +306,6 @@ nav .profile-details i{
   display: flex;
   justify-content: space-between;
   opacity: 90%;
-  
 }
 
 /* left box */
@@ -325,7 +325,36 @@ nav .profile-details i{
 .sales-boxes .box .title{
   font-size: 24px;
   font-weight: 500;
+  font-weight: 800;
+  opacity: 90%;
+ 
   /* margin-bottom: 10px; */
+}
+.sales-boxes .userViewBtns{
+  background-color: transparent;
+  position: relative;
+  text-align: -webkit-right;
+}
+.userViewBtns .editBtn{
+  background-color: darkslategray;
+  color: #5B9494;
+  font-size: 20px;
+  padding: 1px 10px;
+  margin: 0 10px 0 0;
+  border-radius: 10px;
+  font-weight: 800;
+  opacity: 90%;
+}
+.userViewBtns .deleteBtn{
+  background-color: darkslategray;
+  color: #5B9494;
+  font-size: 20px;
+  font-size: 20px;
+  padding: 1px 10px;
+  margin: 0 10px 0 0;
+  border-radius: 10px;
+  font-weight: 800;
+  opacity: 90%;
 }
 .sales-boxes .sales-details li.topic{
   font-size: 20px;
@@ -362,7 +391,7 @@ nav .profile-details i{
 
 /* Right box */
 .home-content .sales-boxes .top-sales{
-  width: 35%;
+  width: 50%;
   background:  #5B9494;
   padding: 20px 30px;
   margin: 0 20px 0 0;
@@ -467,3 +496,4 @@ nav .profile-details i{
     display: none;
   }
 }
+
