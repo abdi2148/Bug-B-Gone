@@ -310,11 +310,11 @@ nav .profile-details i{
 
 /* left box */
 .home-content .sales-boxes .recent-sales{
-  width: 30%;
+  width: 65%;
   background: #5B9494;
-  padding: 10px 15px;
+  padding: 20px 30px;
   margin: 0 20px;
-  border-radius: 6px;
+  border-radius: 12px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 .home-content .sales-boxes .sales-details{
