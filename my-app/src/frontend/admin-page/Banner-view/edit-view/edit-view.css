@@ -415,6 +415,10 @@ nav .profile-details i{
   border-radius: 12px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   height: 20%;
+  position: relative;
+  overflow:hidden;
+  display: table;
+  height: 30px;
 }
 .sales-boxes .right-sales li{
   display: flex;
@@ -477,36 +481,57 @@ nav .profile-details i{
   font-weight: 400;
   color: #333;
 }
-/* Create User*/
+/* Edit User*/
 .createUser{
   font-weight: 800;
   width: 10%;
+  color: #5B9494; 
+}
+.background-right{
+  background: rgb(26, 43, 43);
+  font-size: 20px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  width: 100%;
+  overflow: auto;
+  color: #5B9494; 
 }
 .createView{
   width: 100%;
-
 }
-.deleteBtn{
-  bottom: 0;
+ .deleteBtn{
+  bottom: 12px;
   position: absolute;
-  right: 0;
+  right: 28px;
   color:darkslategray;
   background: rgb(26, 43, 43);
   font-weight: 800;
-  font-size: 15px;
+  font-size: 20px;
   padding: 4px 12px;
   border-radius: 12px;
+  border: 1px solid rgb(65, 109, 109);
+  cursor: pointer;
+  display: inline-block;
 }
-.editBtn{
-  bottom: 0;
+.deleteBtn:hover{
+  background-color: rgb(65, 109, 109);
+}
+ .editBtn{
+  bottom: 12px;
   position: absolute;
-  right: 0;
+  right: 125px;
   color:darkslategray;
   background: rgb(26, 43, 43);
   font-weight: 800;
-  font-size: 15px;
+  font-size: 20px;
   padding: 4px 12px;
   border-radius: 12px;
+  border: 1px solid rgb(65, 109, 109);
+  cursor: pointer;
+  display: inline-block;
+}
+.editBtn:hover{
+  background-color: rgb(65, 109, 109);
 }
 .createBtn{
   bottom: 12px;
@@ -518,7 +543,7 @@ nav .profile-details i{
   font-size: 20px;
   padding: 4px 12px;
   border-radius: 12px;
-  border: 1px solid rgb(65, 109, 109);
+  border: 2px solid rgb(65, 109, 109);
   cursor: pointer;
   display: inline-block;
 }
