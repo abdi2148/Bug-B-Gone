@@ -465,5 +465,7 @@ nav .profile-details i{
   }
   .sidebar.active ~ .home-section nav .profile-details{
     display: none;
+ 
   }
+
 }
