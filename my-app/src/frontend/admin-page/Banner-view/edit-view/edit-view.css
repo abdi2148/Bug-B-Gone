@@ -519,6 +519,11 @@ nav .profile-details i{
   padding: 4px 12px;
   border-radius: 12px;
   border: 1px solid rgb(65, 109, 109);
+  cursor: pointer;
+  display: inline-block;
+}
+.createBtn:hover{
+  background-color: rgb(65, 109, 109);
 }
 .createUser{
   background: rgb(26, 43, 43);
@@ -540,4 +545,5 @@ nav .profile-details i{
   border-radius: 6px;
   border: 2px solid rgb(65, 109, 109);
   height: 35px;
+  font-size: 20px;
 }
