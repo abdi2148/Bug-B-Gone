@@ -1,8 +1,8 @@
 <!DOCTYPE html>
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../edit-view/edit-view.css">
-    <script defer src="../edit-view/js/appFunctions.js"></script>
+    <link rel="stylesheet" href="../edit-project/edit-project.css">
+    <script defer src="../edit-project/js/appFunctions.js"></script>
 
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -22,13 +22,13 @@
           </a>
         </li>
         <li>
-          <a href="../edit-project/edit-project.html">
+          <a href="#" class="active">
             <i class='bx bx-archive-in' ></i>
             <span class="links_name">Edit Project</span>
           </a>
         </li>
         <li>
-          <a href="#" class="active">
+          <a href="../edit-view/edit-view.html" >
             <i class='bx bx-pie-chart-alt-2' ></i>
             <span class="links_name">Edit User</span>
           </a>
@@ -71,33 +71,30 @@
     <div class="home-content">
       <div class="sales-boxes">
         <div class="left-sales box"; style="margin-left: 10px;">
-        <div class="title">Create User</div>
+        <div class="title">Create Project</div>
           <div class="createView">
             <div class="createUser">
               <div class="search-box" style="color: #5B9494;">
                 <i class="title" style="color: #5B9494;;">Name</i>
-                <input class="userTxtField" type="text" placeholder="">
+                <input class="nameTxtField" type="text" placeholder="">
               </div>
               <div class="search-box" style="color: #5B9494;">
-                <i class="title" style="color: #5B9494;;">Email</i>
-                <input class="userTxtField" type="text" placeholder="">
+                <i class="title" style="color: #5B9494;;">Description</i>
+                <textarea class="descriptionTxtField"  name="editProjectTxtField"></textarea>
               </div>
-              <div class="search-box" style="color: #5B9494;">
-                <i class="title" style="color: #5B9494; margin-right: 16px;">Password</i>
-                <input class="userTxtField" type="text" placeholder="">
-              </div>
+
             </div>
           </div>
-          <button type="button" onclick="" id="create" class="createBtn" title="Create">Create new user</button>
+          <button type="button" onclick="" class="createBtn" title="Create">Create new project</button>
       </div>
         <div class="right-sales box";" style="margin-left: 10px;">
-          <div class="title">Users</div>
+          <div class="title">Current Projects</div>
           <div class="background-right">
+          <div class="title">1</div>
+          <div class="title">2</div>
           <div class="title">User</div>
-          <div class="title">User</div>
-          <div class="title">User</div>
-          <div class="title">User</div>
-          <div class="title">User</div>
+          <div class="title">3</div>
+          <div class="title">4</div>
           <div class="title">User</div>
           <div class="title">User</div>
           <div class="title">User</div>
