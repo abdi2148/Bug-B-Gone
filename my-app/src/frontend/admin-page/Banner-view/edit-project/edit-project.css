@@ -533,6 +533,7 @@ nav .profile-details i{
   cursor: pointer;
 }
 .editBtn:hover{
+  background-color: rgb(65, 109, 109);
   background-color: #5B9494;
 }
 .createBtn{
@@ -601,7 +602,6 @@ nav .profile-details i{
   text-align:left;
   margin-bottom: 4px;
   line-height: 25px;
-  
 }
 .projectName:hover{
   background-color: #5B9494;
