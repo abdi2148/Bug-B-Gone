@@ -55,7 +55,7 @@
   background: rgb(0, 0, 0);
 }
 .sidebar .nav-links li a:hover{
-  background: darkslategrey;
+  background: rgb(69, 104, 104);
 }
 .sidebar .nav-links li i{
   min-width: 60px;
@@ -498,40 +498,43 @@ nav .profile-details i{
 }
 .createView{
   width: 100%;
+  position: relative;
+  line-height: 35px;
 }
- .deleteBtn{
-  bottom: 12px;
-  position: absolute;
-  right: 28px;
-  color:darkslategray;
-  background: rgb(26, 43, 43);
-  font-weight: 800;
-  font-size: 20px;
-  padding: 4px 12px;
+.deleteBtn{
+  position:absolute;
+  right: 0px;
+  bottom: -2px;
+  color:rgb(26, 43, 43);
+  background: rgb(65, 109, 109);
+  font-weight: 1000;
+  font-size: 15px;
+  padding: 2px 8px;
   border-radius: 12px;
-  border: 1px solid rgb(65, 109, 109);
+  border: 2px solid rgb(65, 109, 109);
   cursor: pointer;
   display: inline-block;
 }
 .deleteBtn:hover{
   background-color: rgb(65, 109, 109);
 }
- .editBtn{
-  bottom: 12px;
-  position: absolute;
-  right: 125px;
-  color:darkslategray;
-  background: rgb(26, 43, 43);
-  font-weight: 800;
-  font-size: 20px;
-  padding: 4px 12px;
+.editBtn{
+  position:absolute;
+  right: 68px;
+  bottom: -2px;
+  margin-right: 2px;
+  color:rgb(26, 43, 43);
+  background: rgb(65, 109, 109);
+  font-weight: 1000;
+  font-size: 15px;
+  padding: 2px 8px;
   border-radius: 12px;
-  border: 1px solid rgb(65, 109, 109);
+  border: 2px solid rgb(65, 109, 109);
   cursor: pointer;
-  display: inline-block;
 }
 .editBtn:hover{
   background-color: rgb(65, 109, 109);
+  background-color: #5B9494;
 }
 .createBtn{
   bottom: 12px;
@@ -556,10 +559,20 @@ nav .profile-details i{
   padding: 4px 12px;
   border-radius: 12px;
   width: 100%;
-  height: 229px;
+  height: 235px;
 }
 .createUser .title{
   margin-right: 50px;
+  font-size: 20px;
+}
+.search-box .nameTxtField {
+  background-color: darkslategray; 
+  font-weight: 800; 
+  color: #5B9494; 
+  width: 100%;
+  border-radius: 6px;
+  border: 2px solid rgb(65, 109, 109);
+  height: 35px;
   font-size: 20px;
 }
 .search-box .userTxtField {
@@ -569,6 +582,27 @@ nav .profile-details i{
   width: 100%;
   border-radius: 6px;
   border: 2px solid rgb(65, 109, 109);
-  height: 35px;
+  height: 38px;
   font-size: 20px;
+  resize: none;
+}
+.projectName{
+  position: relative;
+  height: 31px;
+  width: 100%;
+  margin-right: 2px;
+  color:rgb(65, 109, 109);
+  background: rgb(26, 43, 43);
+  font-weight: 1000;
+  font-size: 20px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  border: 2px solid rgb(65, 109, 109);
+  cursor: pointer;
+  text-align:left;
+  margin-bottom: 4px;
+  line-height: 25px;
+}
+.projectName:hover{
+  background-color: #5B9494;
 }

@@ -55,7 +55,7 @@
   background: rgb(0, 0, 0);
 }
 .sidebar .nav-links li a:hover{
-  background: darkslategrey;
+  background: rgb(69, 104, 104);
 }
 .sidebar .nav-links li i{
   min-width: 60px;
@@ -356,10 +356,6 @@ nav .profile-details i{
   text-decoration: none;
   transition: all 0.3s ease;
 }
-.sales-boxes .box .button a:hover{
-  background:  #0d3073;
-}
-
 /* Right box */
 .home-content .sales-boxes .top-sales{
   width: 35%;
