@@ -2,6 +2,10 @@ const { app, BrowserWindow, ipcMain } = require('electron')
 const path = require('path')
 const ipc = ipcMain
 
+
+const dataController =   require('./src/BLL/data-service.js');
+
+
 function createWindow () {
     const win = new BrowserWindow({
     width: 1200,
@@ -10,10 +14,18 @@ function createWindow () {
     minHeight: 700,
     frame: false,
     webPreferences: {
+
+      /*
         nodeIntegration: true,
         contextIsolation: false,
         devTools: true,
-        preload: path.join(__dirname, 'preload.js')
+      */
+      nodeIntegration: false, // is default value after Electron v5
+      contextIsolation: true, // protect against prototype pollution
+      enableRemoteModule: false, // turn off remote
+      
+      devTools: true,
+        preload: path.resolve(app.getAppPath(), 'preload.js')
     }
 })
 
@@ -21,13 +33,19 @@ function createWindow () {
     win.setBackgroundColor('#343B48')
 
     //// CLOSE APP
-    ipc.on('minimizeApp', ()=>{
+    ipc.handle('minimizeApp',async ()=>{
         console.log('Clicked on Minimize Btn')
         win.minimize()
     })
 
+    ipc.handle('get-bugs:call', async () => {
+    const isDarkMode = await dataController.getAllBugs();
+console.log(isDarkMode);
+      return isDarkMode;
+    })
+
     //// MAXIMIZE RESTORE APP
-    ipc.on('maximizeRestoreApp', ()=>{
+    ipc.handle('maximizeRestoreApp',async ()=>{
         if(win.isMaximized()){
             console.log('Clicked on Restore')
             win.restore()
@@ -46,7 +64,7 @@ function createWindow () {
     })
 
     //// CLOSE APP
-    ipc.on('closeApp', ()=>{
+    ipc.handle('closeApp',async ()=>{
         console.log('Clicked on Close Btn')
         win.close()
     })

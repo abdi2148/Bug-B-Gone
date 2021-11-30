@@ -2,11 +2,12 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../bug-page/bug-page.css">
-    <script defer src="../bug-page/js/appFunctions.js"></script>
+    <script defer src="../../../common_js/appFunctions.js"></script>
+
 
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
    <body>
@@ -74,30 +75,38 @@
           <button id="closeBtn" class="topBtn closeBtn" title="Close"></button>
       </div>
       </nav>
-
-      <div class="home-content">
-        <div class="sales-boxes">
-          <div class="recent-sales box">
-            <div class="title">Bug #1</div>
-            <div class="sales-details">
-              <ul class="details">
-              <li class="topic">Overview</li>
-              Bug regarding login
-            </ul>
-            </div>
-            <div class="button">
-              <a href="../bug-page/bug-details.html">See Details</a>
-            </div>
-          </div>
-
-          <div class="top-sales box">
-            <div class="title">Add a bug to list</div>
-            <div class="button">
-              <a href="#">Bug creation page</a>
-            </div>
-            <ul class="top-sales-details">
-      </div>
-
+      <div class="container ">
+        <h2>Bug List:</h2>
+          <table id="post" class="table table-striped margin-top-very-big">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  </tr>
+              </thead>or (i = 0; i < array.length; i++)
+  document.writeln((i+1) + ": " + array[i]);
+              <tbody id="post_body">
+                <tr>
+                  <td >asd</td>
+                  <td >asd</td>
+                 </tr>
+                 <tr>
+                  <td >asd</td>
+                  <td >asd</td>
+                 </tr>
+                 <tr>
+                  <td >asd</td>
+                  <td >asd</td>
+                 </tr>
+                 <tr>
+                  <td >asd</td>
+                  <td >asd</td>
+                 </tr>
+             </tbody>
+          </table>
+<div id="something">SOME DIV</div>
+          
+          <script defer src="../bug-page/js/list.js"></script>
   </body>
   </html>
   

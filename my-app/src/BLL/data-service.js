@@ -1,4 +1,4 @@
-const bugrepo = require('../DAL/bug.repo.js');
+const bugrepo = require('../DAL/bug-repo.js');
 
 function getAllBugs(){
     return bugrepo.getAllBugs();
