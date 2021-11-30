@@ -55,7 +55,7 @@
   background: rgb(0, 0, 0);
 }
 .sidebar .nav-links li a:hover{
-  background: darkslategrey;
+  background: rgb(69, 104, 104);
 }
 .sidebar .nav-links li i{
   min-width: 60px;
@@ -138,16 +138,17 @@
 .titleBarBtns > .minimizeBtn{
   padding-left: 5px;
   position: relative;
-  background-image: url('../../../main-page/icons/icon_minimize.png');
+
+  background-image: url('../ticket-page/icons/icon_minimize.png');
 }
 .titleBarBtns > .maximizeBtn{
-  background-image: url('../../../main-page/icons/icon_maximize.png');
+  background-image: url('../ticket-page/icons/icon_maximize.png');
 }
 .titleBarBtns > .restoreBtn{
-  background-image: url('../../../main-page/icons/icon_restore.png');
+  background-image: url('../ticket-page/icons/icon_restore.png');
 }
 .titleBarBtns > .closeBtn{
-  background-image: url('../../../main-page/icons/icon_close.png');
+  background-image: url('../ticket-page/icons/icon_close.png');
 }
 nav .sidebar-button i{
   font-size: 35px;
