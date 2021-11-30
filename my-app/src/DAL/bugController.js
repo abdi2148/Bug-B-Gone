@@ -1,13 +1,9 @@
 'use strict';
 
 const admin = require('firebase-admin');
-const ServiceAccount = require('../ServiceAccountKey.json');
-admin.initializeApp({
-    credential: admin.credential.cert(ServiceAccount)
-});
-
 const db = admin.firestore();
-const bug = require('../models/bug');
+
+const bugjs = require('../models/nodejsBug');
 
 const createBug = async(req, res, next) => {
     try{
@@ -21,20 +17,21 @@ const createBug = async(req, res, next) => {
 
 const getAllBugs = async(req, res, next) =>{
     try {
-        const bugs = await db.collection('bugs');
-        const data = await bugs.get();
-        if(data.empty){
+        const dataRef = db.collection('bugs');
+        const snapshot = await dataRef.get();
+        const bugArray = [];
+        if(snapshot.empty){
             res.status(404).send('No bugs found');
         }else{
-            data.forEach(doc => {
-                const bug = new Bug(
+            await snapshot.forEach(doc => {
+                const bug = new bugjs(
                     doc.id,
                     doc.data().name,
                     doc.data().desc
                 );
                 bugArray.push(bug);
             });
-            res.send(bugArray);
+           return bugArray;
         }
     } catch (error) {
         res.status(400).send(error.message);
