@@ -155,8 +155,44 @@ nav .sidebar-button i{
   margin-right: 10px;
   
 }
-.margin-top-very-big{
-margin-top: 50px !important;
+/* Right box */
+.home-content .sales-boxes .right-sales{
+  width: 100%;
+  background:  #5B9494;
+  padding: 20px 30px;
+  margin: 0 20px 0 0;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  height: 20%;
+  position: relative;
+  overflow:hidden;
+  display: table;
+  height: 30px;
+}
+.sales-boxes .right-sales li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.sales-boxes .right-sales li a img{
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-right: 10px;
+  background: #333;
+}
+.sales-boxes .right-sales li a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.sales-boxes .right-sales li .product,
+.price{
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
 }
 .home-section nav .search-box{
   position: absolute; left: 270px;
@@ -165,6 +201,46 @@ margin-top: 50px !important;
   width: 100%;
   margin: 0 20px;  
     
+}
+.BugName{
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 12px;
+  margin-bottom: 4px;
+  height: 31px;
+  line-height: 25px;
+  overflow: hidden;
+  
+}
+.BugName:hover{
+  border: 2px solid rgb(65, 109, 109);
+}
+.home-section .home-content{
+  position: relative;
+  padding-top: 104px;
+}
+.home-content .overview-boxes{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  margin-bottom: 26px;
+  opacity: 90%;
+}
+.background-bug{
+  background: rgb(26, 43, 43);
+  font-size: 20px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  width: 100%;
+  overflow: auto;
+  color: #5B9494; 
+}
+.createViewLeft{
+  width: 100%;
+  position: relative;
+  line-height: 35px;
 }
 nav .search-box input{
   height: 100%;
