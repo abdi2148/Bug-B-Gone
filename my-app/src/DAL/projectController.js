@@ -9,7 +9,7 @@ admin.initializeApp({
 const db = admin.firestore();
 const project = require('../models/project');
 
-const createProject = async(req, res, next) => {
+const addProject = async(req, res, next) => {
     try{
         const data = req.body;
         await db.collection('projects').doc().set(data);
@@ -40,7 +40,7 @@ const getAllProjects = async(req, res, next) =>{
     }
 }
 
-const getProjectWithID = async(req, res, next) =>{
+const getProject = async(req, res, next) =>{
     try {
         const id = req.params.id;
         const project = await db.collection('projects').doc(id);
@@ -78,9 +78,9 @@ const deleteProject = async(req, res, next) =>{
 }
 
 module.exports = {
-    createProject,
+    addProject,
     getAllProjects,
-    getProjectWithID,
+    getProject,
     updateProject,
     deleteProject
 }
