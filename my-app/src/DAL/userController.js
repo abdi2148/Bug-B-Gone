@@ -9,7 +9,7 @@ admin.initializeApp({
 const db = admin.firestore();
 const user = require('../models/user');
 
-const addUser = async(req, res, next) => {
+const createUser = async(req, res, next) => {
     try{
         const data = req.body;
         await db.collection('users').doc().set(data);
@@ -42,7 +42,7 @@ const getAllUsers = async(req, res, next) =>{
     }
 }
 
-const getUser = async(req, res, next) =>{
+const getUserWithID = async(req, res, next) =>{
     try {
         const id = req.params.id;
         const user = await db.collection('users').doc(id);
@@ -80,9 +80,9 @@ const deleteUser = async(req, res, next) =>{
 }
 
 module.exports = {
-    addUser,
+    createUser,
     getAllUsers,
-    getUser,
+    getUserWithID,
     updateUser,
     deleteUser
 }
