@@ -138,6 +138,7 @@
 .titleBarBtns > .minimizeBtn{
   padding-left: 5px;
   position: relative;
+
   background-image: url('../ticket-page/icons/icon_minimize.png');
 }
 .titleBarBtns > .maximizeBtn{
@@ -153,6 +154,9 @@ nav .sidebar-button i{
   font-size: 35px;
   margin-right: 10px;
   
+}
+.margin-top-very-big{
+margin-top: 50px !important;
 }
 .home-section nav .search-box{
   position: absolute; left: 270px;
