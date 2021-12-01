@@ -1,15 +1,11 @@
 'use strict';
 
 const admin = require('firebase-admin');
-const ServiceAccount = require('../ServiceAccountKey.json');
-admin.initializeApp({
-    credential: admin.credential.cert(ServiceAccount)
-});
-
 const db = admin.firestore();
-const bug = require('../models/bug');
 
-const addBug = async(req, res, next) => {
+const Bug = require('../models/bug.js');
+
+const createBug = async(req, res, next) => {
     try{
         const data = req.body;
         await db.collection('bugs').doc().set(data);
@@ -21,12 +17,13 @@ const addBug = async(req, res, next) => {
 
 const getAllBugs = async(req, res, next) =>{
     try {
-        const bugs = await db.collection('bugs');
-        const data = await bugs.get();
-        if(data.empty){
+        const dataRef = db.collection('bugs');
+        const snapshot = await dataRef.get();
+        const bugArray = [];
+        if(snapshot.empty){
             res.status(404).send('No bugs found');
         }else{
-            data.forEach(doc => {
+            await snapshot.forEach(doc => {
                 const bug = new Bug(
                     doc.id,
                     doc.data().name,
@@ -34,14 +31,14 @@ const getAllBugs = async(req, res, next) =>{
                 );
                 bugArray.push(bug);
             });
-            res.send(bugArray);
+           return bugArray;
         }
     } catch (error) {
         res.status(400).send(error.message);
     }
 }
 
-const getBug = async(req, res, next) =>{
+const getBugWithID = async(req, res, next) =>{
     try {
         const id = req.params.id;
         const bug = await db.collection('bugs').doc(id);
@@ -79,9 +76,9 @@ const deleteBug = async(req, res, next) =>{
 }
 
 module.exports = {
-    addBug,
+    createBug,
     getAllBugs,
-    getBug,
+    getBugWithID,
     updateBug,
     deleteBug
 }
