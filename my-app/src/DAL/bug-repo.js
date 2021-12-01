@@ -1,4 +1,8 @@
 const admin = require('firebase-admin');
+const ServiceAccount = require('../../config/bug-b-gone-firebase-adminsdk-h3ffc-cd348573d9.json');
+admin.initializeApp({
+    credential: admin.credential.cert(ServiceAccount)
+});
 
 const db = admin.firestore();
 

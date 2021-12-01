@@ -2,10 +2,9 @@ const { contextBridge, ipcRenderer } = require('electron')
 
 contextBridge.exposeInMainWorld(
 'api', {
-  send: async () => { 
-   const allBugs = await ipcRenderer.invoke('get-bugs:call');
-   return allBugs;
-   //console.log(allBugs);
+  send: async (channel, data) => { 
+    console.log('Sent');
+   await ipcRenderer.invoke('get-bugs:call');
   },
   maximizeRestoreApp: () => { 
     ipcRenderer.invoke('maximizeRestoreApp');
@@ -16,11 +15,9 @@ contextBridge.exposeInMainWorld(
   minimizeApp: () => { 
     ipcRenderer.invoke('minimizeApp');
   },
-},
-'user',{
-  getUser: () => { 
-  ipcRenderer.invoke('maximizeRestoreApp');
-},
+  recieved: (channel, data) => { 
+    ipcRenderer.invoke('get-bugs:call');
+  },
 })
 
 window.addEventListener('DOMContentLoaded', () => {
