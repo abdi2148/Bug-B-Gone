@@ -39,9 +39,8 @@ function createWindow () {
     })
 
     ipc.handle('get-bugs:call', async () => {
-    const isDarkMode = await dataController.getAllBugs();
-console.log(isDarkMode);
-      return isDarkMode;
+      const allBugs = await dataController.getAllBugs();
+      return allBugs;
     })
 
     //// MAXIMIZE RESTORE APP

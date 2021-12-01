@@ -1,10 +1,6 @@
 'use strict';
 
 const admin = require('firebase-admin');
-const ServiceAccount = require('../ServiceAccountKey.json');
-admin.initializeApp({
-    credential: admin.credential.cert(ServiceAccount)
-});
 
 const db = admin.firestore();
 const project = require('../models/project');

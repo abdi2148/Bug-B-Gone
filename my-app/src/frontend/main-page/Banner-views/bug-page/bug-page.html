@@ -4,7 +4,8 @@
 
     <link rel="stylesheet" href="../bug-page/bug-page.css">
     <script defer src="../../../common_js/appFunctions.js"></script>
-
+          
+    <script defer src="../bug-page/js/list.js"></script>
 
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -127,7 +128,19 @@
     </div>
       <div class="container">
           <table id="post" class="table table-striped margin-top-very-big">
-          <script defer src="../bug-page/js/list.js"></script>
+              <thead>
+                 <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Description</th>
+              </tr>
+              </thead>
+             <tbody id="table-data">
+          
+             </tbody>
+        
+          </table>
+
   </body>
   </html>
   

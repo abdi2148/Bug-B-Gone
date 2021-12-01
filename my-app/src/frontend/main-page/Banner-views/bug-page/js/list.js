@@ -4,9 +4,21 @@ test();
 
 async function test(){
 
-const isDarkMode = await window.api.send("toMain", "some data");
+const getAllBugs = await window.api.send();
 
+console.log(getAllBugs);
 
-for (i = 0; i < isDarkMode.length; i++)
-document.getElementById("something").innerHTML += (i+1) + ": " + array[i];
+var table = document.getElementById("table-data");
+table.innerHTML="";
+var tr="";
+getAllBugs.forEach(x=>{
+   tr+='<tr>';
+   tr+='<td>'+x.id+'</td>'+'<td>'+x.name+'</td>'+'<td>'+x.desc+'</td>'
+   tr+='</tr>'
+
+})
+table.innerHTML+=tr;
+
+//document.getElementById("something").innerHTML += (i+1) + ": " + array[i];
+
 }
