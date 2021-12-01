@@ -5,7 +5,7 @@ const db = admin.firestore();
 
 const bugjs = require('../models/nodejsBug');
 
-const createBug = async(req, res, next) => {
+const addBug = async(req, res, next) => {
     try{
         const data = req.body;
         await db.collection('bugs').doc().set(data);
@@ -38,7 +38,7 @@ const getAllBugs = async(req, res, next) =>{
     }
 }
 
-const getBugWithID = async(req, res, next) =>{
+const getBug = async(req, res, next) =>{
     try {
         const id = req.params.id;
         const bug = await db.collection('bugs').doc(id);
@@ -76,9 +76,9 @@ const deleteBug = async(req, res, next) =>{
 }
 
 module.exports = {
-    createBug,
+    addBug,
     getAllBugs,
-    getBugWithID,
+    getBug,
     updateBug,
     deleteBug
 }
