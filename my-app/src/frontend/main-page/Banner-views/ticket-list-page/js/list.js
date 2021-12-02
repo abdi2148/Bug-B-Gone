@@ -4,7 +4,7 @@ test();
 
 async function test(){
 
-const getAllBugs = await window.api.send();
+const getAllBugs = await window.api.getAllBugs();
 
 console.log(getAllBugs);
 
