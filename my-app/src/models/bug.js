@@ -1,7 +1,7 @@
-class Bug {
-    constructor(id,name,desc){
-        this.id = id;
-        this.name = name;
-        this.desc = desc;
-    }
-}
+var Bug = function (id,name,desc) {
+    this.id = id;
+    this.name = name;
+    this.desc = desc;
+};
+
+module.exports = Bug;
