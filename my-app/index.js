@@ -38,9 +38,70 @@ function createWindow () {
         win.minimize()
     })
 
+    //Bug calls
     ipc.handle('get-bugs:call', async () => {
       const allBugs = await dataController.getAllBugs();
       return allBugs;
+    })
+    ipc.handle('get-bug-ID:call', async (data) => {
+      const bugWithID = await dataController.getBugWithID(data);
+      return bugWithID;
+    })
+    ipc.handle('create-bug:call', async (data) => {
+      const allBugs = await dataController.createBug(data);
+      return allBugs;
+    })
+    ipc.handle('update-bug:call', async (data) => {
+      const allBugs = await dataController.updateBug(data);
+      return allBugs;
+    })
+    ipc.handle('delete-bug:call', async (data) => {
+      const allBugs = await dataController.deleteBug(data);
+      return allBugs;
+    })
+
+    //Project calls
+    ipc.handle('get-projects:call', async () => {
+      const allProjects = await dataController.getAllProjects();
+      return allProjects;
+    })
+    ipc.handle('get-project-ID:call', async (data) => {
+      const projectWithID = await dataController.getProjectWithID(data);
+      return projectWithID;
+    })
+    ipc.handle('create-project:call', async (data) => {
+      const createdProject = await dataController.createProject(data);
+      return createdProject;
+    })
+    ipc.handle('update-project:call', async (data) => {
+      const updatedProject = await dataController.updateProject(data);
+      return updatedProject;
+    })
+    ipc.handle('delete-project:call', async (data) => {
+      const deletedProject = await dataController.deleteProject(data);
+      return deletedProject;
+    })
+
+    //User calls
+    ipc.handle('get-users:call', async () => {
+      const allUsers = await dataController.getAllUsers();
+      return allUsers;
+    })
+    ipc.handle('get-user-ID:call', async (data) => {
+      const userWithID = await dataController.getUserWithID(data);
+      return userWithID;
+    })
+    ipc.handle('create-user:call', async (data) => {
+      const createdUser = await dataController.createUser(data);
+      return createdUser;
+    })
+    ipc.handle('update-user:call', async (data) => {
+      const updatedUser = await dataController.updateUser(data);
+      return updatedUser;
+    })
+    ipc.handle('delete-user:call', async (data) => {
+      const deletedUser = await dataController.deleteUser(data);
+      return deletedUser;
     })
 
     //// MAXIMIZE RESTORE APP
