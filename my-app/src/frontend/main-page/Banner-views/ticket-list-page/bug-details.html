@@ -1,8 +1,10 @@
 <!DOCTYPE html>
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../bug-page/bug-details.css">
-    <script defer src="../bug-page/js/appFunctions.js"></script>
+    <link rel="stylesheet" href="../ticket-list-page/bug-details.css">
+    <script defer src="../../../common_js/appFunctions.js"></script>
+    <script defer src="../ticket-list-page/js/details.js"></script>
+
 
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -16,9 +18,9 @@
       </div>
       <ul class="nav-links">
         <li class="log_out">
-          <a href="../bug-page/bug-page.html">
+          <a href="../ticket-list-page/ticket-list-page.html">
             <i class='bx bx-log-out'></i>
-            <span class="links_name">Log out</span>
+            <span class="links_name">Return to list</span>
           </a>
         </li>
       </ul>
@@ -47,29 +49,28 @@
 
       <div class="home-content">
        <div class="sales-boxes">
-        <div class="recent-sales box">
-          <div class="title">Details</div>
-          <div class="sales-details">
-            <ul class="details">
-              <li class="topic">Date</li>
-              11/11/2021
-            </ul>
-            <ul class="details">
-            <li class="topic">Description</li>
-            This bug causes the login view to have an error
-          </ul>
-          <ul class="details">
-          
-          </ul>
-          <ul class="details">
-            <li class="topic">Priority</li>
-            High
-          </ul>
-          <ul class="details">
-            <li class="topic">Member</li>
-            Abdi
-          </ul>
+          <div class="right-sales box"; style="margin-left: 10px;">
+            <div style="font-size:xx-large; color: rgb(26, 43, 43);"class="title">Details:</div>
+                <div class="background-bug">
+                  <div class="createViewLeft">
+                      <table>
+                        <tr>
+                          <th style="padding-right:20px">Name:</th>
+                          <th style="float:left; padding-right:220px">Type:</th>
+                          <th style="padding-right:60px">Priority:</th>
+                          <th style="float:left">Description:</th>
+                        </tr>
+                        <tbody id="post_body">
+                        </tbody>
+                  </table>
+                  </div>
+                </div>
+              </div>  
+            </div>
           </div>
+        </div>
+          <div class="container">
+              <table id="post" class="table table-striped margin-top-very-big">
   </body>
   </html>
   
