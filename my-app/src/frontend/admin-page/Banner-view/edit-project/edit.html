@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../edit-project/edit-project.css">
+    <script defer src="../../../common_js/appFunctions.js"></script>
+
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+    <div class="sidebar">
+      <div class="logo-details">
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="../edit-project/edit-project.html">
+            <i class='bx bx-grid-alt' ></i>
+            <span class="links_name">Go Back</span>
+          </a>
+        </li>
+        <li class="log_out">
+          <a href="../login-page/login-page.html">
+            <i class='bx bx-log-out'></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+  </div>
+  
+  <section class="home-section" style="background-color: darkslategray;">
+    <nav>
+      <div class="sidebar-button">
+        <span class="dashboard">//Project name\\</span>
+      </div>
+      <div class="search-box" style="color: #5B9494;">
+        <input type="text" placeholder="Search...">
+        <i class='bx bx-search' ></i>
+      </div>
+      <div class="profile-details">
+        <span class="admin_name">Abdi</span>
+        <i class='bx bx-chevron-down' ></i>
+      </div>
+      <div class="titleBarBtns">
+        <button id="minimizeBtn" class="topBtn minimizeBtn" title="Minimize"></button>
+        <button id="maxResBtn" class="topBtn maximizeBtn" title="Maximize"></button>
+        <button id="closeBtn" class="topBtn closeBtn" title="Close"></button>
+    </div>
+  </nav>
+    <div class="home-content">
+      <div class="sales-boxes">
+        <div class="left-sales box"; style="margin-left: 10px;">
+        <div class="title">Edit Project</div>
+          <div class="createView">
+            <div class="createUser">
+              <div class="search-box" style="color: #5B9494;">
+                <i class="title" style="color: #5B9494;;">Name</i>
+                <input class="nameTxtField" type="text" placeholder="">
+              </div>
+              <div class="search-box" style="color: #5B9494;">
+                <i class="title" style="color: #5B9494;;">Description</i>
+                <textarea class="descriptionTxtField"  name="editProjectTxtField"></textarea>
+              </div>
+            </div>
+          </div>
+          <button type="button" onclick="" class="createBtn" title="Create">Edit Project</button>
+          <div class="dropdown">
+            <form action="#">
+              <select class="dropbtn" name="prioity" id="prio">
+                <option class="dropbtn" value="selectUser">Select User</option>
+                <option class="dropbtn" value="userOne">User 1</option>
+                <option class="dropbtn" value="userTwo">User 2</option>
+                <option class="dropbtn" value="userThree">User 3</option>
+                <option class="dropbtn" value="userFour">User 4</option>
+              </div>
+              </select>
+            </form>
+          </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../edit-view/edit-view.css">
+    <script defer src="../../../common_js/appFunctions.js"></script>
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+    <div class="sidebar">
+      <div class="logo-details">
+
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="../edit-view/edit-view.html">
+            <i class='bx bx-menu' ></i>
+            <span class="links_name">Go Back</span>
+          </a>
+        </li>
+        <li class="log_out">
+          <a href="../login-page/login-page.html">
+            <i class='bx bx-log-out'></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+  </div>
+  
+  <section class="home-section" style="background-color: darkslategray;">
+    <nav>
+      <div class="sidebar-button">
+        <span class="dashboard">Edit User</span>
+      </div>
+      <div class="search-box" style="color: #5B9494;">
+        <input type="text" placeholder="Search...">
+        <i class='bx bx-search' ></i>
+      </div>
+      <div class="profile-details">
+        <span class="admin_name">Abdi</span>
+        <i class='bx bx-chevron-down' ></i>
+      </div>
+      <div class="titleBarBtns">
+        <button id="minimizeBtn" class="topBtn minimizeBtn" title="Minimize"></button>
+        <button id="maxResBtn" class="topBtn maximizeBtn" title="Maximize"></button>
+        <button id="closeBtn" class="topBtn closeBtn" title="Close"></button>
+    </div>
+  </nav>
+    <div class="home-content">
+      <div class="sales-boxes">
+        <div class="left-sales box"; style="margin-left: 10px;">
+        <div class="title">Edit User</div>
+          <div class="createView">
+            <div class="createUser">
+              <div class="search-box" style="color: #5B9494;">
+                <i class="title" style="color: #5B9494;;">Name</i>
+                <input class="userTxtField" type="text" placeholder="">
+              </div>
+              <div class="search-box" style="color: #5B9494;">
+                <i class="title" style="color: #5B9494;;">Email</i>
+                <input class="userTxtField" type="text" placeholder="">
+              </div>
+              <div class="search-box" style="color: #5B9494;">
+                <i class="title" style="color: #5B9494; margin-right: 16px;">Password</i>
+                <input class="userTxtField" type="text" placeholder="">
+              </div>
+            </div>
+          </div>
+          <button type="button" onclick="" id="create" class="createBtn" title="Create">Save Changes</button>
+          </div>
+      </div>
+  </section>
+</body>
+</html>

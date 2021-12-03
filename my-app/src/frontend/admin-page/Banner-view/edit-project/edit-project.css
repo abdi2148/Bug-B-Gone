@@ -606,3 +606,19 @@ nav .profile-details i{
 .projectName:hover{
   background-color: #5B9494;
 }
+.dropbtn{
+  position: absolute;
+  color: darkslategray;
+  background: rgb(26, 43, 43);
+  font-weight: 800;
+  font-size: 20px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  border: 2px solid rgb(65, 109, 109);
+  cursor: pointer;
+  display: inline-block;
+  bottom:11px;
+}
+.dropbtn:hover{
+  background-color: rgb(65, 109, 109);
+}
