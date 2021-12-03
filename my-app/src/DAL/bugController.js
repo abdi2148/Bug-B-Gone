@@ -27,7 +27,11 @@ const getAllBugs = async(req, res, next) =>{
                 const bug = new Bug(
                     doc.id,
                     doc.data().name,
-                    doc.data().desc
+                    doc.data().desc,
+                    doc.data().shortdesc,
+                    doc.data().type,
+                    doc.data().priority,
+                    doc.data().status
                 );
                 bugArray.push(bug);
             });
