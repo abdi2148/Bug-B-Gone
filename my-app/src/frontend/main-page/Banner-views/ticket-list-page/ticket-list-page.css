@@ -135,6 +135,7 @@
 .titleBarBtns > .topBtn:active{
   background-color: #4F9FEE;
 }
+
 .titleBarBtns > .minimizeBtn{
   padding-left: 5px;
   position: relative;
