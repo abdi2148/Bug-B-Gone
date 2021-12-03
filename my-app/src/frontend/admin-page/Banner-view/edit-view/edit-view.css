@@ -516,7 +516,7 @@ nav .profile-details i{
   display: inline-block;
 }
 .deleteBtn:hover{
-  background-color: rgb(65, 109, 109);
+  background-color: #5B9494;
 }
 .editBtn{
   position:absolute;
@@ -533,7 +533,6 @@ nav .profile-details i{
   cursor: pointer;
 }
 .editBtn:hover{
-  background-color: rgb(65, 109, 109);
   background-color: #5B9494;
 }
 .createBtn{
