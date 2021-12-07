@@ -42,18 +42,27 @@ const getAllBugs = async(req, res, next) =>{
     }
 }
 
-const getBugWithID = async(req, res, next) =>{
+const getBugWithID = async(data) => {
     try {
-        const id = req.params.id;
-        const bug = await db.collection('bugs').doc(id);
-        const data = await bug.get();
-        if(!data.exists){
-            res.status(404).send('Bug with the given id not found');
+        const dataref = await db.collection('bugs').doc(data);
+        const snapshot = await dataref.get();
+  
+        if(!snapshot.exists){
+            console.log('Doesnt exist');
         }else{
-            res.send(data.data())
+            const bug =  new Bug(
+                snapshot.id,
+                snapshot.data().name,
+                snapshot.data().desc,
+                snapshot.data().shortdesc,
+                snapshot.data().type,
+                snapshot.data().priority,
+                snapshot.data().status
+                );
+           return bug;
         }
     } catch (error) {
-        res.status(400).send(error.message);
+        console.log(error);
     }
 }
 
