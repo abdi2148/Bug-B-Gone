@@ -621,7 +621,7 @@ nav .profile-details i{
   position: relative;
   display: inline-block;
 }
-.dropbtn{
+.dropbtnType{
   position: absolute;
   color: rgb(26, 43, 43);
   background: darkslategray;
@@ -634,6 +634,27 @@ nav .profile-details i{
   display: inline-block;
   bottom:-18px;
 }
-.dropbtn:hover{
+.dropbtnType:hover{
+  background-color: rgb(65, 109, 109);
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropbtnPrio{
+  position: absolute;
+  color: rgb(26, 43, 43);
+  background: darkslategray;
+  font-weight: 800;
+  font-size: 20px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  border: 2px solid rgb(65, 109, 109);
+  cursor: pointer;
+  display: inline-block;
+  bottom: -7px;
+  right: -289px;
+}
+.dropbtnPrio:hover{
   background-color: rgb(65, 109, 109);
 }

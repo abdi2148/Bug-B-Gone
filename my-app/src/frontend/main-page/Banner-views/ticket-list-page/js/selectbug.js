@@ -18,17 +18,19 @@ async function test(){
 const bug = await window.api.getBugWithID(getParam());
 
 console.log(bug);
-var table = document.getElementById("post_body");
-table.innerHTML="";
-var tr="";
 
-   tr+='<tr type="button" onclick="">';
-   tr+='<td class="bugName" value="placeholder">'+ bug.name +'</td>'
-   +'<td class="type" value="placeholder">'+ bug.id +'</td>'
-   +'<td class="prioity" value="placeholder">'+ bug.desc +'</td>'
-   +'<td class="short_description" value="placeholder">' + bug.desc + '</td>';
-   tr+='</tr>';
+var inputField = document.getElementById("inputTextName");
+inputField.value+=bug.name;
 
-table.innerHTML+=tr;
+var inputFidescriptionTexteld = document.getElementById("shortdescriptionText");
+inputFidescriptionTexteld.value+=bug.desc;
 
+var inputFidescriptionTexteld = document.getElementById("descriptionText");
+inputFidescriptionTexteld.value+=bug.desc;
+
+var dropdownprio = document.getElementById("prio");
+dropdownprio.selectedIndex = 2;
+
+var dropdowntype = document.getElementById("type");
+dropdowntype.selectedIndex = 1;
 }
