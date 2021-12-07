@@ -18,7 +18,7 @@ contextBridge.exposeInMainWorld(
       const allBugs = await ipcRenderer.invoke('get-bugs:call');
       return allBugs;
      },
-     getBugWithID: async (data) => { 
+     getBugWithID: async function (data) { 
       const bugWithID = await ipcRenderer.invoke('get-bug-ID:call', data);
       return bugWithID;
      },
@@ -100,7 +100,8 @@ contextBridge.exposeInMainWorld(
     ipcRenderer.invoke('maximizeRestoreApp');
   },
 })
-  
+
+
   window.addEventListener('DOMContentLoaded', () => {
       const replaceText = (selector, text) => {
         const element = document.getElementById(selector)

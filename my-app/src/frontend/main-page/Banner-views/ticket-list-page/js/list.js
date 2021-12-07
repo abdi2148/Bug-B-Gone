@@ -17,8 +17,9 @@ getAllBugs.forEach(bug=>{
    tr+='<td class="bugName" value="placeholder">'+ bug.name +'</td>'
    +'<td class="type" value="placeholder">'+ bug.id +'</td>'
    +'<td class="prioity" value="placeholder">'+ bug.desc +'</td>'
-   +'<td class="short_description" value="placeholder">' + bug.desc + '</td>';
-
+   +'<td class="short_description" value="placeholder">' + bug.desc + '</td>'
+   +'<a href="../ticket-list-page/bug-details.html?bugId='+bug.id+'">See Details</a>';
+   
    tr+='</tr>';
 
 })
