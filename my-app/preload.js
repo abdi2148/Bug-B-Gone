@@ -44,7 +44,7 @@ contextBridge.exposeInMainWorld(
       const userWithID = await ipcRenderer.invoke('get-user-ID:call', data);
       return userWithID;
      },
-     createUser: async (data) => { 
+     createUser: async function (data)  { 
       const newUser = ipcRenderer.invoke('create-user:call', data);
       return newUser;
      },

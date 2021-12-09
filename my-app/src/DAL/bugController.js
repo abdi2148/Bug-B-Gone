@@ -5,13 +5,27 @@ const db = admin.firestore();
 
 const Bug = require('../models/bug.js');
 
-const createBug = async(req, res, next) => {
-    try{
-        const data = req.body;
-        await db.collection('bugs').doc().set(data);
-        res.send('Bug saved successfully')
-    }catch(error){
-        res.status(400).send(error.message);
+const createBug = async(data) => {
+    try {
+        const dataref = await db.collection('bugs').doc(data);
+        const snapshot = await dataref.create();
+  
+        if(!snapshot.exists){
+            console.log('Doesnt exist');
+        }else{
+            const bug =  new Bug(
+                snapshot.id,
+                snapshot.data().name,
+                snapshot.data().desc,
+                snapshot.data().shortdesc,
+                snapshot.data().type,
+                snapshot.data().priority,
+                snapshot.data().status,          
+                );
+           return bug;
+        }
+    } catch (error) {
+        console.log(error);
     }
 }
 

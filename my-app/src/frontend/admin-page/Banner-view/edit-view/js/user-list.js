@@ -14,7 +14,7 @@ var tr="";
 getAllUsers.forEach(user=>{
 
    tr+='<tr type="button" onclick="">';
-   tr+='<td class="bugName" value="placeholder">'+ user.email +'</td>'
+   tr+='<td class="userName" value="placeholder">'+ user.email +'</td>'
    +'<td class="type" value="placeholder">'+ user.id +'</td>'
    +'<td class="prioity" value="placeholder">'+ user.name +'</td>'
    +'<td class="short_description" value="placeholder">' + user.password + '</td>';

@@ -91,8 +91,8 @@ function createWindow () {
       const userWithID = await dataController.getUserWithID(data);
       return userWithID;
     })
-    ipc.handle('create-user:call', async (data) => {
-      const createdUser = await dataController.createUser(data);
+    ipc.handle('create-user:call', async (event, ...args) => {
+      const createdUser = await dataController.createUser(...args);
       return createdUser;
     })
     ipc.handle('update-user:call', async (data) => {

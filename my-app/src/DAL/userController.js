@@ -6,13 +6,24 @@ const db = admin.firestore();
 //FOR THE LOVE OF GOD FUCKING FIX THIS
 const user = require('../models/user');
 
-const createUser = async(req, res, next) => {
-    try{
-        const data = req.body;
-        await db.collection('users').doc().set(data);
-        res.send('User saved successfully')
-    }catch(error){
-        res.status(400).send(error.message);
+const createUser = async(data) => {
+    try {
+        const dataref = await db.collection('users').doc(data);
+        const snapshot = await dataref.create();
+  
+        if(!snapshot.exists){
+            console.log('Doesnt exist');
+        }else{
+            const user =  new User(
+                snapshot.id,
+                snapshot.data().email,
+                snapshot.data().name,
+                snapshot.data().password
+                );
+           return user;
+        }
+    } catch (error) {
+        console.log(error);
     }
 }
 
