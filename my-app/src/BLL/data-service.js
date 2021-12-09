@@ -4,9 +4,9 @@ admin.initializeApp({
     credential: admin.credential.cert(ServiceAccount)
 });
 
-const bugrepo = require('../DAL/bugController');
-const userepo = require('../DAL/userController');
-const projectrepo = require('../DAL/projectController');
+const bugrepo = require('../DAL/bugRepo');
+const userepo = require('../DAL/userRepo');
+const projectrepo = require('../DAL/projectRepo');
 
 function createBug(data){
     return bugrepo.createBug(data);
