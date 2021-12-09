@@ -16,7 +16,7 @@ const createProject = async(data) => {
 
 const getAllProjects = async() =>{
     try {
-        const dataRef = await db.collection('projects');
+        const dataRef = db.collection('projects');
         const snapshot = await dataRef.get();
         const projectArray = [];
         if(snapshot.empty){

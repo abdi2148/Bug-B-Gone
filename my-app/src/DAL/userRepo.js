@@ -16,7 +16,7 @@ const createUser = async(data) => {
 
 const getAllUsers = async() =>{
     try {
-        const dataRef = await db.collection('users');
+        const dataRef = db.collection('users');
         const snapshot = await dataRef.get();
         const userArray = [];
         if(snapshot.empty){
