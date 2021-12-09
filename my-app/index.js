@@ -8,9 +8,9 @@ const dataController =   require('./src/BLL/data-service.js');
 
 function createWindow () {
     const win = new BrowserWindow({
-    width: 1200,
+    width: 1250,
     height: 680,
-    minWidth: 1250,
+    minWidth: 1300,
     minHeight: 700,
     frame: false,
     webPreferences: {
