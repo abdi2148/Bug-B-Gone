@@ -78,29 +78,7 @@ contextBridge.exposeInMainWorld(
       const deletedProject = ipcRenderer.invoke('delete-project:call', data);
       return deletedProject;
      },
-  },
-
-  'project',{
-    getUser: () => { 
-    ipcRenderer.invoke('maximizeRestoreApp');
-  }
-},
-
-  'bug',{
-    getAll: async () => { 
-      console.log("ayy lmao");
-      const allBugs = await ipcRenderer.invoke('get-bugs:call');
-      return allBugs;
-      //console.log(allBugs);
-     }
-    },
-
-  'user',{
-    getUser: () => { 
-    ipcRenderer.invoke('maximizeRestoreApp');
-  },
-})
-
+  })
 
   window.addEventListener('DOMContentLoaded', () => {
       const replaceText = (selector, text) => {
