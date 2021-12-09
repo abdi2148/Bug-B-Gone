@@ -23,14 +23,14 @@ var inputField = document.getElementById("inputTextName");
 inputField.value+=bug.name;
 
 var inputFidescriptionTexteld = document.getElementById("shortdescriptionText");
-inputFidescriptionTexteld.value+=bug.desc;
+inputFidescriptionTexteld.value+=bug.shortdesc;
 
 var inputFidescriptionTexteld = document.getElementById("descriptionText");
 inputFidescriptionTexteld.value+=bug.desc;
 
 var dropdownprio = document.getElementById("prio");
-dropdownprio.selectedIndex = 2;
+dropdownprio.selectedIndex += bug.priority;
 
 var dropdowntype = document.getElementById("type");
-dropdowntype.selectedIndex = 1;
+dropdowntype.selectedIndex = bug.type;
 }

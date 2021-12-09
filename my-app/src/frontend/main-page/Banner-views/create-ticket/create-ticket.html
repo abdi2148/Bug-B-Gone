@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../create-ticket/create-ticket.css"> 
      <script defer src="../../../common_js/appFunctions.js"></script>
+     <script defer src="../create-ticket/js/create.js"></script>
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
@@ -77,22 +78,25 @@
           <div class="title">Create Project</div>
             <div class="createView">
               <div class="createUser">
+                <form action="#" id="signup"> 
+
                 <div class="search-box" style="color: #5B9494;">
                   <i class="title" style="color: #5B9494;;">Name</i>
-                  <input class="nameTxtField" type="text" placeholder="">
+                  <input id="name" name="name" class="nameTxtField" type="text" placeholder="">
                 </div>
                 <div class="search-box" style="color: #5B9494;">
                   <i class="title" style="color: #5B9494;;">Short description</i>
-                  <textarea class="shortDescriptionTxtField"  name="editProjectTxtField"></textarea>
+                  <textarea id="shortdesc"  name="shortdesc" type="text" class="shortDescriptionTxtField"></textarea>
                 </div>
                 <div class="search-box" style="color: #5B9494;">
                   <i class="title" style="color: #5B9494;;">Description</i>
-                  <textarea class="descriptionTxtField"  name="editProjectTxtField"></textarea>
-                  <button type="button" onclick="" class="createBtn" title="Create">Create new project</button>
+                  <textarea id="desc"  name="desc" type="text" class="descriptionTxtField" ></textarea>
+
+                  <button type="submit" class="createBtn">Create new project</button>
                   <div class="dropdown">
                     <form action="#">
-                      <select class="dropbtnPrio" name="prioity" id="prio">
-                        <option class="dropbtn" value="dropbtn">Low</option>
+                      <select id="priority"type="dropdown" class="dropbtnPrio" name="priority">
+                        <option class="dropbtn" value="low">Low</option>
                         <option class="dropbtn" value="medium">Medium</option>
                         <option class="dropbtn" value="high">High</option>
                         <option class="dropbtn" value="urgent">Urgent</option>
@@ -101,13 +105,14 @@
                     </form>
                     <div class="dropdown">
                     <form action="#">
-                      <select class="dropbtnType" name="type" id="type">
+                      <select id="type" type="dropdown" class="dropbtnType" name="type">
                         <option class="dropbtn" value="frontend">Frontend</option>
                         <option class="dropbtn" value="backend">Backend</option>
                         <option class="dropbtn" value="fullstack">Fullstack</option>
                       </div>
                       </select>
                     </form>
+                  </form>
                   </div>
                 </div>
               </div>
