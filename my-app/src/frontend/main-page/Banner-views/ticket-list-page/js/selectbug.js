@@ -13,7 +13,7 @@ var result = null,
     return result;
 }
 
-async function test(){
+async function sendBug(data){
 
 const bug = await window.api.getBugWithID(getParam());
 
