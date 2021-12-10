@@ -5,11 +5,10 @@ const db = admin.firestore();
 
 const Bug = require('../models/bug.js');
 
-const createBug = async(req, res, next) => {
+const createBug = async(data) => {
     try{
-        const data = req.body;
         await db.collection('bugs').doc().set(data);
-        res.send('Bug saved successfully')
+       
     }catch(error){
         res.status(400).send(error.message);
     }

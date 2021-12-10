@@ -17,5 +17,27 @@ var prioritySelect = document.getElementById('priority');
 var priority = prioritySelect.options[prioritySelect.selectedIndex].value;
 var typeSelect = document.getElementById('type');
 var type = typeSelect.options[typeSelect.selectedIndex].value;
-console.log(name, desc, shortdesc, priority, type);
+
+
+var objectToPass ={
+    desc: desc,
+    name: name,
+priority: priority,
+shortdesc : shortdesc,
+status: "open",
+type: type
+}
+
+
+sendBug(objectToPass)
+
 });
+
+
+async function sendBug(data){
+
+    const bug = await window.api.createBug(data);
+    
+    console.log(bug);
+    
+}

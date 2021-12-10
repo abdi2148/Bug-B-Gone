@@ -47,8 +47,8 @@ function createWindow () {
       const bugWithID = await dataController.getBugWithID(...args);
       return bugWithID;
     })
-    ipc.handle('create-bug:call', async (data) => {
-      const allBugs = await dataController.createBug(data);
+    ipc.handle('create-bug:call', async (event, ...args) => {
+      const allBugs = await dataController.createBug(...args);
       return allBugs;
     })
     ipc.handle('update-bug:call', async (data) => {
