@@ -51,12 +51,12 @@ function createWindow () {
       const allBugs = await dataController.createBug(...args);
       return allBugs;
     })
-    ipc.handle('update-bug:call', async (data) => {
-      const allBugs = await dataController.updateBug(data);
+    ipc.handle('update-bug:call', async (event, ...args) => {
+      const allBugs = await dataController.updateBug(args);
       return allBugs;
     })
-    ipc.handle('delete-bug:call', async (data) => {
-      const allBugs = await dataController.deleteBug(data);
+    ipc.handle('delete-bug:call', async (event, ...args) => {
+      const allBugs = await dataController.deleteBug(args);
       return allBugs;
     })
 
@@ -65,20 +65,20 @@ function createWindow () {
       const allProjects = await dataController.getAllProjects();
       return allProjects;
     })
-    ipc.handle('get-project-ID:call', async (data) => {
-      const projectWithID = await dataController.getProjectWithID(data);
+    ipc.handle('get-project-ID:call', async (event, ...args) => {
+      const projectWithID = await dataController.getProjectWithID(args);
       return projectWithID;
     })
-    ipc.handle('create-project:call', async (data) => {
-      const createdProject = await dataController.createProject(data);
+    ipc.handle('create-project:call', async (event, ...args) => {
+      const createdProject = await dataController.createProject(args);
       return createdProject;
     })
-    ipc.handle('update-project:call', async (data) => {
-      const updatedProject = await dataController.updateProject(data);
+    ipc.handle('update-project:call', async (event, ...args) => {
+      const updatedProject = await dataController.updateProject(args);
       return updatedProject;
     })
-    ipc.handle('delete-project:call', async (data) => {
-      const deletedProject = await dataController.deleteProject(data);
+    ipc.handle('delete-project:call', async (event, ...args) => {
+      const deletedProject = await dataController.deleteProject(args);
       return deletedProject;
     })
 
@@ -87,20 +87,20 @@ function createWindow () {
       const allUsers = await dataController.getAllUsers();
       return allUsers;
     })
-    ipc.handle('get-user-ID:call', async (data) => {
-      const userWithID = await dataController.getUserWithID(data);
+    ipc.handle('get-user-ID:call', async (event, ...args) => {
+      const userWithID = await dataController.getUserWithID(args);
       return userWithID;
     })
-    ipc.handle('create-user:call', async (data) => {
-      const createdUser = await dataController.createUser(data);
+    ipc.handle('create-user:call', async (event, ...args) => {
+      const createdUser = await dataController.createUser(args);
       return createdUser;
     })
-    ipc.handle('update-user:call', async (data) => {
-      const updatedUser = await dataController.updateUser(data);
+    ipc.handle('update-user:call', async (event, ...args) => {
+      const updatedUser = await dataController.updateUser(args);
       return updatedUser;
     })
-    ipc.handle('delete-user:call', async (data) => {
-      const deletedUser = await dataController.deleteUser(data);
+    ipc.handle('delete-user:call', async (event, ...args) => {
+      const deletedUser = await dataController.deleteUser(args);
       return deletedUser;
     })
 

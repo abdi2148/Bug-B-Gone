@@ -10,17 +10,17 @@ const createBug = async(data) => {
         await db.collection('bugs').doc().set(data);
        
     }catch(error){
-        res.status(400).send(error.message);
+        console.log(error);
     }
 }
 
-const getAllBugs = async(req, res, next) =>{
+const getAllBugs = async() =>{
     try {
         const dataRef = db.collection('bugs');
         const snapshot = await dataRef.get();
         const bugArray = [];
         if(snapshot.empty){
-            res.status(404).send('No bugs found');
+            console.log('No bugs found');
         }else{
             await snapshot.forEach(doc => {
                 const bug = new Bug(
@@ -37,7 +37,7 @@ const getAllBugs = async(req, res, next) =>{
            return bugArray;
         }
     } catch (error) {
-        res.status(400).send(error.message);
+        console.log(error);
     }
 }
 
@@ -65,25 +65,22 @@ const getBugWithID = async(data) => {
     }
 }
 
-const updateBug = async(req, res, next) =>{
+const updateBug = async(data) =>{
     try {
-        const id = req.param.id;
-        const data = req.body;
-        const bug = await db.collection('bugs').doc(id);
+        const bug = await db.collection('bugs').doc(data.id);
         await bug.update(data);
-        res.send('Bug updated successfully')
+        console.log('Bug updated successfully')
     } catch (error) {
-        res.status(400).send(error.message);
+        console.log(error);
     }
 }
 
-const deleteBug = async(req, res, next) =>{
+const deleteBug = async(data) =>{
     try {
-        const id = req.params.id;
-        await db.collection('bugs').doc(id).delete();
-        res.send('Bug deleted successfully');
+        await db.collection('bugs').doc(data).delete();
+        console.log('Bug deleted successfully');
     } catch (error) {
-        res.status(400).send(error.message);
+        console.log(error);
     }
 }
 
