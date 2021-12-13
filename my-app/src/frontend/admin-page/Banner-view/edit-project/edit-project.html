@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../edit-project/edit-project.css">
     <script defer src="../../../common_js/appFunctions.js"></script>
-
+    <script defer src="../../Banner-view/edit-project/js/create.js"></script>
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
@@ -47,7 +47,6 @@
         </li>
       </ul>
   </div>
-  
   <section class="home-section" style="background-color: darkslategray;">
     <nav>
       <div class="sidebar-button">
@@ -73,31 +72,30 @@
         <div class="title">Create Project</div>
           <div class="createView">
             <div class="createUser">
+              <form action="#" id="signup"> 
               <div class="search-box" style="color: #5B9494;">
                 <i class="title" style="color: #5B9494;;">Name</i>
-                <input class="nameTxtField" type="text" placeholder="">
+                <input id="name" name="name" class="nameTxtField" type="text" placeholder="">
               </div>
               <div class="search-box" style="color: #5B9494;">
                 <i class="title" style="color: #5B9494;;">Description</i>
-                <textarea class="descriptionTxtField"  name="editProjectTxtField"></textarea>
+                <textarea id="desc"  name="desc" type="text" class="descriptionTxtField" ></textarea>
               </div>
             </div>
           </div>
-          <button type="button" onclick="" class="createBtn" title="Create">Create new project</button>
+          <button type="submit" class="createBtn">Create Project</button>
           <div class="dropdown">
             <form action="#">
-              <select class="dropbtn" name="prioity" id="prio">
-                <option class="dropbtn" value="selectUser">Select User</option>
-                <option class="dropbtn" value="userOne">User 1</option>
-                <option class="dropbtn" value="userTwo">User 2</option>
-                <option class="dropbtn" value="userThree">User 3</option>
-                <option class="dropbtn" value="userFour">User 4</option>
+              <select class="dropbtnType" name="type" id="type">
+                <option class="dropbtn" value="frontend">Frontend</option>
+                <option class="dropbtn" value="backend">backend</option>
+                <option class="dropbtn" value="fullstack">Fullstack</option>
               </div>
               </select>
             </form>
           </div>
       </div>
-        <div class="right-sales box";" style="margin-left: 10px;">
+        <div class="right-sales box"; style="margin-left: 10px;">
           <div class="title">Current Projects</div>
               <div class="background-right">
                 <div class="createView">
@@ -106,35 +104,7 @@
                   <input class="editBtn" onclick="execute(document.getElementById('textbox1').value)" type="button" value="Edit" >
                   <input class="deleteBtn" onclick="execute(document.getElementById('textbox1').value)" type="button" value="Delete" >
                     </div>
-                  </a>
-                <div class="projectName"name="ProjectName" type="button" value="placeholder">Jonas
-                  <input class="editBtn" onclick="execute(document.getElementById('textbox1').value)" type="button" value="Edit" >
-                  <input class="deleteBtn" onclick="execute(document.getElementById('textbox1').value)" type="button" value="Delete" >
-                </div>                  
-                <div class="projectName"name="ProjectName" type="button" value="placeholder">Jonas
-                  <input class="editBtn" onclick="execute(document.getElementById('textbox1').value)" type="button" value="Edit" >
-                  <input class="deleteBtn" onclick="execute(document.getElementById('textbox1').value)" type="button" value="Delete" >
-                </div>                  
-                <div class="projectName"name="ProjectName" type="button" value="placeholder">Jonas
-                  <input class="editBtn" onclick="execute(document.getElementById('textbox1').value)" type="button" value="Edit" >
-                  <input class="deleteBtn" onclick="execute(document.getElementById('textbox1').value)" type="button" value="Delete" >
-                </div>  
-                <div class="projectName"name="ProjectName" type="button" value="placeholder">Jonas
-                  <input class="editBtn" onclick="execute(document.getElementById('textbox1').value)" type="button" value="Edit" >
-                  <input class="deleteBtn" onclick="execute(document.getElementById('textbox1').value)" type="button" value="Delete" >
-                </div>
-                <div class="projectName"name="ProjectName" type="button" value="placeholder">Jonas
-                  <input class="editBtn" onclick="execute(document.getElementById('textbox1').value)" type="button" value="Edit" >
-                  <input class="deleteBtn" onclick="execute(document.getElementById('textbox1').value)" type="button" value="Delete" >
-                </div>                  
-                <div class="projectName"name="ProjectName" type="button" value="placeholder">Jonas
-                  <input class="editBtn" onclick="execute(document.getElementById('textbox1').value)" type="button" value="Edit" >
-                  <input class="deleteBtn" onclick="execute(document.getElementById('textbox1').value)" type="button" value="Delete" >
-                </div>                  
-                <div class="projectName"name="ProjectName" type="button" value="placeholder">Jonas
-                  <input class="editBtn" onclick="execute(document.getElementById('textbox1').value)" type="button" value="Edit" >
-                  <input class="deleteBtn" onclick="execute(document.getElementById('textbox1').value)" type="button" value="Delete" >
-                </div>  
+                  </a>     
               </div>
         </div>
     </div>

@@ -637,10 +637,6 @@ nav .profile-details i{
 .dropbtnType:hover{
   background-color: rgb(65, 109, 109);
 }
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
 .dropbtnPrio{
   position: absolute;
   color: rgb(26, 43, 43);
