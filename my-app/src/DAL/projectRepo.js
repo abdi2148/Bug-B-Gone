@@ -25,7 +25,8 @@ const getAllProjects = async() =>{
             await snapshot.forEach(doc => {
                 const bug = new Project(
                     doc.id,
-                    doc.data().name
+                    doc.data().name,
+                    doc.data().desc
                 );
                 bugArray.push(bug);
             });
@@ -46,7 +47,8 @@ const getProjectWithID = async(data) =>{
         }else{
             const project = new Project(
                 snapshot.id,
-                snapshot.data().name
+                snapshot.data().name,
+                doc.data().desc
             );
             return project;
         }
