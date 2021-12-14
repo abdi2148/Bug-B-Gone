@@ -1,4 +1,4 @@
-test();
+sendBug();
 
 function getParam(){
 var result = null,

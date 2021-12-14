@@ -52,11 +52,11 @@ function createWindow () {
       return allBugs;
     })
     ipc.handle('update-bug:call', async (event, ...args) => {
-      const allBugs = await dataController.updateBug(args);
+      const allBugs = await dataController.updateBug(...args);
       return allBugs;
     })
     ipc.handle('delete-bug:call', async (event, ...args) => {
-      const allBugs = await dataController.deleteBug(args);
+      const allBugs = await dataController.deleteBug(...args);
       return allBugs;
     })
 
@@ -66,19 +66,19 @@ function createWindow () {
       return allProjects;
     })
     ipc.handle('get-project-ID:call', async (event, ...args) => {
-      const projectWithID = await dataController.getProjectWithID(args);
+      const projectWithID = await dataController.getProjectWithID(...args);
       return projectWithID;
     })
     ipc.handle('create-project:call', async (event, ...args) => {
-      const createdProject = await dataController.createProject(args);
+      const createdProject = await dataController.createProject(...args);
       return createdProject;
     })
     ipc.handle('update-project:call', async (event, ...args) => {
-      const updatedProject = await dataController.updateProject(args);
+      const updatedProject = await dataController.updateProject(...args);
       return updatedProject;
     })
     ipc.handle('delete-project:call', async (event, ...args) => {
-      const deletedProject = await dataController.deleteProject(args);
+      const deletedProject = await dataController.deleteProject(...args);
       return deletedProject;
     })
 
@@ -88,19 +88,19 @@ function createWindow () {
       return allUsers;
     })
     ipc.handle('get-user-ID:call', async (event, ...args) => {
-      const userWithID = await dataController.getUserWithID(args);
+      const userWithID = await dataController.getUserWithID(...args);
       return userWithID;
     })
     ipc.handle('create-user:call', async (event, ...args) => {
-      const createdUser = await dataController.createUser(args);
+      const createdUser = await dataController.createUser(...args);
       return createdUser;
     })
     ipc.handle('update-user:call', async (event, ...args) => {
-      const updatedUser = await dataController.updateUser(args);
+      const updatedUser = await dataController.updateUser(...args);
       return updatedUser;
     })
     ipc.handle('delete-user:call', async (event, ...args) => {
-      const deletedUser = await dataController.deleteUser(args);
+      const deletedUser = await dataController.deleteUser(...args);
       return deletedUser;
     })
 

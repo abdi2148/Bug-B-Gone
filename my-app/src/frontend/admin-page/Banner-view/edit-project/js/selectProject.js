@@ -1,4 +1,4 @@
-test();
+sendProject();
 
 function getParam(){
 var result = null,
