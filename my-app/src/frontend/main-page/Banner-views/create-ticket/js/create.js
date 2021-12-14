@@ -22,17 +22,16 @@ var type = typeSelect.options[typeSelect.selectedIndex].value;
 var objectToPass ={
     desc: desc,
     name: name,
-priority: priority,
-shortdesc : shortdesc,
-status: "open",
-type: type
+    priority: priority,
+    shortdesc : shortdesc,
+    status: "open",
+    type: type
 }
 
 
 sendBug(objectToPass)
 
 });
-
 
 async function sendBug(data){
 

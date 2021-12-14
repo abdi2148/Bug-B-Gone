@@ -622,3 +622,24 @@ nav .profile-details i{
 .dropbtn:hover{
   background-color: rgb(65, 109, 109);
 }
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropbtnType{
+  position: absolute;
+  color: darkslategrey;
+  background: rgb(26, 43, 43);
+  font-weight: 800;
+  font-size: 20px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  border: 2px solid rgb(65, 109, 109);
+  cursor: pointer;
+  display: inline-block;
+  bottom: -22px;
+
+}
+.dropbtnType:hover{
+  background-color: rgb(65, 109, 109);
+}

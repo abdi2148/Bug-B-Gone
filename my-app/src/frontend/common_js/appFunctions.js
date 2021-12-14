@@ -30,9 +30,7 @@ maxResBtn.addEventListener('click', async ()=>{
 //// CLOSE APP
 closeBtn.addEventListener('click', async ()=>{
     await window.api.closeApp();
-
 })
-
 //// TOGGLE MENU
 // Expand and Retract
 showHideMenus.addEventListener('click', ()=>{
