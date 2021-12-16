@@ -13,6 +13,11 @@ contextBridge.exposeInMainWorld(
       ipcRenderer.invoke('minimizeApp');
     },
 
+    login: async function (data) { 
+      const loginInfo = await ipcRenderer.invoke('login:call', data);
+      return loginInfo;
+     },
+
     //Bug calls
     getAllBugs: async () => { 
       const allBugs = await ipcRenderer.invoke('get-bugs:call');

@@ -3,7 +3,27 @@ const path = require('path')
 const ipc = ipcMain
 
 
-const dataController =   require('./src/BLL/data-service.js');
+const dataController = require('./src/BLL/data-service.js');
+
+// Import the functions you need from the SDKs you need
+const firebaseAPP = require('firebase/app');
+
+const auth =require('firebase/auth');
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+firebaseAPP.initializeApp
+({
+  apiKey: "AIzaSyAkPpZpO0NLHTQbO0zGSZVqybtyIvg_2x8",
+  authDomain: "bug-b-gone.firebaseapp.com",
+  databaseURL: "https://bug-b-gone-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "bug-b-gone",
+  storageBucket: "bug-b-gone.appspot.com",
+  messagingSenderId: "531503281471",
+  appId: "1:531503281471:web:63354aa776fc06317fcf8a"
+});
+
 
 
 function createWindow () {
@@ -29,13 +49,26 @@ function createWindow () {
     }
 })
 
-    win.loadFile('src/frontend/main-page/main-page.html')
+    win.loadFile('src/frontend/login-page/login-page.html')
     win.setBackgroundColor('#343B48')
 
     //// CLOSE APP
     ipc.handle('minimizeApp',async ()=>{
         console.log('Clicked on Minimize Btn')
         win.minimize()
+    })
+  
+      ipc.handle('login:call', async (event, ...args) =>{
+
+        var userCredential = await auth.signInWithEmailAndPassword(auth.getAuth(),args[0]['username'], args[0]['password'])
+          .catch((error) => {
+            console.log(error.message)
+          });
+        if (auth.getAuth().currentUser == null) {
+          return { error: 'wrong user credentials' };
+        } else {
+          return { id: auth.getAuth().currentUser.uid, email: auth.getAuth().currentUser.email };
+        }
     })
 
     //Bug calls
