@@ -1,7 +1,7 @@
 body,
 .signin {
   background-color: #d3d3d3;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #fff;
   font-size: 14px;
   letter-spacing: 1px;
@@ -13,7 +13,7 @@ body,
   width: 405px;
   margin: auto;
   padding: 60px 60px;
-  background-color: darkslategrey;  
+  background-color: darkslategrey;
   background-size: cover;
   box-shadow: 0px 30px 60px -5px #000;
 }
@@ -47,7 +47,7 @@ h2:first-child {
 span {
   text-transform: uppercase;
   font-size: 12px;
-  opacity: 0.4; 
+  opacity: 0.4;
   display: inline-block;
   position: relative;
   top: -65px;
@@ -81,11 +81,9 @@ span {
 
 input[type="text"],
 input[type="password"] {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #fff;
 }
-
-
 
 input {
   display: inline-block;
@@ -114,7 +112,7 @@ span,
 }
 
 .custom-checkbox:checked:after {
-  content: '\2714';
+  content: "\2714";
   font-size: 10px;
   position: absolute;
   top: 1px;
@@ -132,9 +130,9 @@ label {
   padding-left: 5px;
 }
 
-.signin {
+.signIn {
   background-color: #000000;
-  color: #FFF;
+  color: #fff;
   width: 100%;
   padding: 10px 20px;
   display: block;
@@ -146,13 +144,13 @@ label {
   text-transform: uppercase;
 }
 
-.signin:hover {
+.signIn:hover {
   background: #4082f5;
   box-shadow: 0px 4px 35px -5px #4082f5;
   cursor: pointer;
 }
 
-.signin:focus {
+.signIn:focus {
   outline: none;
 }
 
