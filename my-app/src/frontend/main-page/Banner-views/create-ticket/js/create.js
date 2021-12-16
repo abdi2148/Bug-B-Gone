@@ -7,6 +7,9 @@ const type = form.elements['type'];
 const priority = form.elements['priority'];
 const status = form.elements['status'];
 
+//include selector for projects
+var projects = window.api.getAllProjects();
+
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -17,7 +20,6 @@ var prioritySelect = document.getElementById('priority');
 var priority = prioritySelect.options[prioritySelect.selectedIndex].value;
 var typeSelect = document.getElementById('type');
 var type = typeSelect.options[typeSelect.selectedIndex].value;
-
 
 var objectToPass ={
     desc: desc,
