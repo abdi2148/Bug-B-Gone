@@ -24,8 +24,6 @@ firebaseAPP.initializeApp
   appId: "1:531503281471:web:63354aa776fc06317fcf8a"
 });
 
-
-
 function createWindow () {
     const win = new BrowserWindow({
     width: 1250,
@@ -99,6 +97,7 @@ function createWindow () {
       return allProjects;
     })
     ipc.handle('get-project-ID:call', async (event, ...args) => {
+      console.log(...args)
       const projectWithID = await dataController.getProjectWithID(...args);
       return projectWithID;
     })
