@@ -1,4 +1,4 @@
-sendBug();
+populateFields();
 
 function getParam(){
 var result = null,
@@ -13,7 +13,7 @@ var result = null,
     return result;
 }
 
-async function sendBug(data){
+async function populateFields(data){
 
 const bug = await window.api.getBugWithID(getParam());
 
