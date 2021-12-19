@@ -3,7 +3,7 @@
 const admin = require('firebase-admin');
 
 const db = admin.firestore();
-const Project = require('../models/project');
+const Project = require('../models/project.js');
 
 const createProject = async(data) => {
     try{
@@ -23,12 +23,12 @@ const getAllProjects = async() =>{
             console.log('No projects found');
         }else{
             await snapshot.forEach(doc => {
-                const bug = new Project(
+                const project = new Project(
                     doc.id,
                     doc.data().name,
                     doc.data().desc
                 );
-                bugArray.push(bug);
+                projectArray.push(project);
             });
             return projectArray;
         }
@@ -42,13 +42,13 @@ const getProjectWithID = async(data) =>{
         const dataref = await db.collection('projects').doc(data);
         const snapshot = await dataref.get();
 
-        if(!data.exists){
+        if(snapshot.empty){
             console.log('Project with the given id not found');
         }else{
             const project = new Project(
                 snapshot.id,
                 snapshot.data().name,
-                doc.data().desc
+                snapshot.data().desc
             );
             return project;
         }
