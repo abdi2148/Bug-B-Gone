@@ -52,6 +52,7 @@
           <div class="title">Details:</div>
             <div class="createView">
               <div class="createUser">
+                <form action="#" id="signup"> 
                 <div class="search-box" style="color: #5B9494;">
                   <i class="title" style="color: #5B9494;;">Name</i>
                   <input id="inputTextName" class="nameTxtField" type="text" placeholder="">
@@ -59,10 +60,9 @@
                 <div class="search-box" style="color: #5B9494;">
                   <i class="title" style="color: #5B9494;;">Short description</i>
                   <textarea id="shortdescriptionText" class="shortDescriptionTxtField"  name="editShortProjectTxtField"></textarea>
-                </div>
-                <div class="search-box" style="color: #5B9494;">
-                  <i class="title" style="color: #5B9494;;">Description</i>
-                  <textarea id="descriptionText" class="descriptionTxtField"  name="editProjectTxtField"></textarea>
+                  <div class="search-box" style="color: #5B9494;">
+                    <i class="title" style="color: #5B9494;;">Description</i>
+                    <textarea id="descriptionText"  name="desc" type="text" class="descriptionTxtField" ></textarea>
                   <button type="button" onclick="" class="createBtn" title="Create">Save Changes</button>
                   <div class="dropdown">
                     <form action="#">
@@ -86,13 +86,23 @@
                     <div class="dropdown">
                       <form action="#">
                         <select id="selectProject"type="dropdown" class="selectProject" name="project">
-                          <option class="dropbtn" value="">test</option>
+                          <option class="dropbtn" value="">Project</option>
                           <option class="dropbtn" value="medium">test2</option>
                           <option class="dropbtn" value="high">test3</option>
                           <option class="dropbtn" value="urgent">Urgent</option>
                         </div>
                         </select>
                   </form>
+                  <div class="dropdown">
+                    <form action="#">
+                      <select id="selectUser"type="dropdown" class="selectUser" name="user">
+                        <option class="dropbtn" value="">User</option>
+                        <option class="dropbtn" value="medium">test2</option>
+                        <option class="dropbtn" value="high">test3</option>
+                        <option class="dropbtn" value="urgent">Urgent</option>
+                      </div>
+                      </select>
+                </form>
                   </tr>
                   <tbody id="post_body">
                   </tbody>
