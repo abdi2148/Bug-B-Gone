@@ -1,29 +1,26 @@
 body,
 .signin {
   background-color: #d3d3d3;
-  font-family: "Montserrat", sans-serif;
   color: #fff;
   font-size: 14px;
   letter-spacing: 1px;
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
 }
 
 .login {
   position: relative;
-  height: 560px;
-  width: 405px;
   margin: auto;
   padding: 60px 60px;
   background-color: darkslategrey;
   background-size: cover;
   box-shadow: 0px 30px 60px -5px #000;
+  height: 564px;
+
 }
 
 form {
   padding-top: 80px;
-}
-
-.active {
-  border-bottom: 2px solid, darkslategrey;
 }
 
 .nonactive {
@@ -37,11 +34,8 @@ h2 {
   padding-bottom: 5px;
   letter-spacing: 2px;
   display: inline-block;
-  font-weight: 100;
-}
-
-h2:first-child {
-  padding-left: 0px;
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
 }
 
 span {
@@ -83,6 +77,10 @@ input[type="text"],
 input[type="password"] {
   font-family: "Montserrat", sans-serif;
   color: #fff;
+  width: 600px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 input {
@@ -94,7 +92,7 @@ input {
 h2,
 span,
 .custom-checkbox {
-  margin-left: 20px;
+  margin-left: 22%;
 }
 
 .custom-checkbox {
@@ -131,9 +129,9 @@ label {
 }
 
 .signIn {
-  background-color: #000000;
+  background-color: rgb(26, 43, 43);
   color: #fff;
-  width: 100%;
+  width: 600px;
   padding: 10px 20px;
   display: block;
   height: 39px;
@@ -142,11 +140,15 @@ label {
   transition: all 0.5s ease-in-out;
   border: none;
   text-transform: uppercase;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 .signIn:hover {
-  background: #4082f5;
-  box-shadow: 0px 4px 35px -5px #4082f5;
+  border: rgb(26, 43, 43);
+  box-shadow: 0px 4px 35px -5px darkslategray;
   cursor: pointer;
 }
 
