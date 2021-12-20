@@ -72,7 +72,7 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-style: normal;
 }
-.sidebar .nav-links .log_out{
+.sidebar .nav-links .submitlogout{
   position: absolute;
   bottom: 0;
   width: 100%;

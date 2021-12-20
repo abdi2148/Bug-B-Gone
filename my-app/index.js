@@ -49,7 +49,7 @@ function createWindow () {
     }
 })
 
-    win.loadFile('src/frontend/login-page/login-page.html')
+    win.loadFile('src/frontend/main-page/main-page.html')
     win.setBackgroundColor('#343B48')
 
     //// CLOSE APP
@@ -58,6 +58,7 @@ function createWindow () {
         win.minimize()
     })
   
+      //Login Call
       ipc.handle('login:call', async (event, ...args) =>{
 
         var userCredential = await auth.signInWithEmailAndPassword(auth.getAuth(),args[0]['username'], args[0]['password'])
@@ -69,8 +70,20 @@ function createWindow () {
         } else {
           return { id: auth.getAuth().currentUser.uid, email: auth.getAuth().currentUser.email };
         }
-    })
+      })
+  
+      //Logout Call
+      ipc.handle('login:call', async (event, ...args) =>{
 
+        firebase.auth().signOut().then(() => {
+         // Sign-out successful.
+        }).catch((error) => {
+          console.log(error.message)
+        // An error happened.
+        })
+      })
+
+  
     //Bug calls
     ipc.handle('get-bugs:call', async () => {
       const allBugs = await dataController.getAllBugs();
