@@ -405,7 +405,7 @@ nav .profile-details i{
 .sales-boxes .box .title{
   font-size: 24px;
   font-weight: 500;
-  /* margin-bottom: 10px; */
+  margin-left: 10px;
 }
 .sales-boxes .sales-details li.topic{
   font-size: 20px;
@@ -473,6 +473,48 @@ nav .profile-details i{
   font-size: 17px;
   font-weight: 400;
   color: #333;
+}
+.dropbtnPrio{
+  right: 13px;
+  color: rgb(26, 43, 43);
+  background: darkslategray;
+  font-weight: 800;
+  font-size: 20px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  border: 2px solid rgb(65, 109, 109);
+  cursor: pointer;
+  display: inline-block;
+}
+.dropbtnPrio:hover{
+  background-color: rgb(65, 109, 109);
+}
+.searchBoxBugList {
+  background-color: darkslategray; 
+  font-weight: 800; 
+  color: #5B9494; 
+  width: 100%;
+  border-radius: 6px;
+  border: 2px solid rgb(65, 109, 109);
+  height: 35px;
+  font-size: 20px;
+}
+
+  .searchBoxList input{
+  position: absolute;
+  background-color: darkslategray; 
+  font-weight: 800; 
+  color: #5B9494; 
+  width: 30%;
+  border-radius: 6px;
+  height: 43px;
+  font-size: 18px;
+  margin-left: 200px;
+  cursor: pointer;
+  border-radius: 12px;
+  border: 2px solid rgb(65, 109, 109);
+  padding: 4px 12px;
+    
 }
 /* Responsive Media Query */
 @media (max-width: 1240px) {

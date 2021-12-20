@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
 
     <link rel="stylesheet" href="../ticket-list-page/ticket-list-page.css">
-    <script defer src="../../../common_js/appFunctions.js"></script>
+    <script defer src="../../../common_js/appFunctions.js"></script>  
     <script defer src="../ticket-list-page/js/list.js"></script>
 
     <!-- Boxicons CDN Link -->
@@ -79,10 +79,23 @@
       <div class="right-sales box"; style="margin-left: 10px;">
         <div style="font-size:xx-large; color: rgb(26, 43, 43);"class="title">Bug List:</div>
             <div class="background-bug">
+              <div class="searchBoxList" style="color: #5B9494;">
+                <input type="text" placeholder="Search...">
+              </div>
+              <div class="dropdown">
+                <form action="#">
+                  <select id="priority"type="dropdown" class="dropbtnPrio" name="priority">
+                    <option class="dropbtn" value="low">Project Name</option>
+                    <option class="dropbtn" value="medium">Medium</option>
+                    <option class="dropbtn" value="high">High</option>
+                    <option class="dropbtn" value="urgent">Urgent</option>
+                  </div>
+                  </select>
+                </form>
               <div style="white-space: nowrap;"class="createViewLeft">
                   <table>
                     <tr>
-                      <th style="padding-right:20px">Bug Name:</th>
+                      <th style="padding-right: 120px">Bug Name:</th>
                       <th style="float:left; padding-right:50px">Type:</th>
                       <th style="padding-right:60px">Priority:</th>
                       <th style="float:left;">Short Description:</th>
