@@ -49,15 +49,25 @@ const getBugWithID = async(data) => {
         if(!snapshot.exists){
             console.log('Doesnt exist');
         }else{
-            const bug =  new Bug(
-                snapshot.id,
-                snapshot.data().name,
-                snapshot.data().desc,
-                snapshot.data().shortdesc,
-                snapshot.data().type,
-                snapshot.data().priority,
-                snapshot.data().status
-                );
+            var bug ={
+                id: snapshot.data().id,
+                desc: snapshot.data().desc,
+                name: snapshot.data().name,
+                priority: snapshot.data().priority,
+                shortdesc : snapshot.data().shortdesc,
+                status: snapshot.data().status,
+                type: snapshot.data().type,
+                    project :{
+                projid : snapshot.data().project.id,
+                name : snapshot.data().project.name,
+                desc : snapshot.data().project.desc,
+                 },
+                     user :{
+                userid : snapshot.data().user.id,
+                name : snapshot.data().user.name,
+                email : snapshot.data().user.email,
+                 }
+            }
            return bug;
         }
     } catch (error) {
@@ -67,8 +77,7 @@ const getBugWithID = async(data) => {
 
 const updateBug = async(data) =>{
     try {
-        const bug = await db.collection('bugs').doc(data.id);
-        await bug.update(data);
+        const bug = await db.collection('bugs').doc(data.id).update(data);
         console.log('Bug updated successfully')
     } catch (error) {
         console.log(error);

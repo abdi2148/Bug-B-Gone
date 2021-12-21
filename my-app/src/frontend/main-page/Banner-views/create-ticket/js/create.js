@@ -3,14 +3,6 @@ populateSelectUser();
 
 const form = document.querySelector('#signup');
 
-//Is this needed?
-const name = form.elements['name'];
-const desc = form.elements['desc'];
-const shortdesc = form.elements['shortdesc'];
-const type = form.elements['type'];
-const priority = form.elements['priority'];
-const status = form.elements['status'];
-
 async function populateSelectProject(){
     const projects = await window.api.getAllProjects();
     var select = document.getElementById("selectProject");
@@ -43,7 +35,6 @@ var selectProject = document.getElementById("selectProject");
 var selectedProject = selectProject.options[selectProject.selectedIndex].value;
 var selectUser = document.getElementById("selectUser");
 var selectedUser = selectUser.options[selectUser.selectedIndex].value;
-
 const loadedProject = await loadProject(selectedProject)
 const loadedUser = await loadUser(selectedUser)
 
