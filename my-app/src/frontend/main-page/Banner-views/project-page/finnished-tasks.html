@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="finnished-tasks.css">
+    <script defer src="../../../common_js/appFunctions.js"></script>  
+    <script defer src="../../Banner-views/ticket-list-page/js/list.js"></script>
+
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+    <div class="sidebar">
+      <div class="logo-details">
+
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="project-page.html" >
+            <i class='bx bx-grid-alt' ></i>
+            <span class="links_name">Go back </span>
+          </a>
+        </li>
+
+        <li class="log_out">
+          <a href="../../../login-page/login-page.html">
+            <i class='bx bx-log-out'></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+  </div>
+  
+    <section class="home-section" style="background-color: darkslategray;">
+      <nav>
+        <div class="sidebar-button">
+          <span class="dashboard">Finnished Bugs</span>
+        </div>
+        <div class="search-box" style="color: #5B9494;">
+          <input type="text" placeholder="Search...">
+          <i class='bx bx-search' ></i>
+        </div>
+        <div class="profile-details">
+          <span class="admin_name">Abdi</span>
+          <i class='bx bx-chevron-down' ></i>
+        </div>
+        <div class="titleBarBtns">
+          <button id="minimizeBtn" class="topBtn minimizeBtn" title="Minimize"></button>
+          <button id="maxResBtn" class="topBtn maximizeBtn" title="Maximize"></button>
+          <button id="closeBtn" class="topBtn closeBtn" title="Close"></button>
+      </div>
+      </nav>
+  <div class="home-content">
+    <div class="sales-boxes">
+      <div class="right-sales box"; style="margin-left: 10px;">
+        <div style="font-size:xx-large; color: rgb(26, 43, 43);"class="title">Finnished Bugs:</div>
+            <div class="background-bug">
+              <div class="searchBoxList" style="color: #5B9494;">
+                <input type="text" placeholder="Search...">
+              </div>
+              <div class="dropdown">
+                <form action="#">
+                  <select id="priority"type="dropdown" class="dropbtnPrio" name="priority">
+                    <option class="dropbtn" value="low">Project Name</option>
+                    <option class="dropbtn" value="medium">Medium</option>
+                    <option class="dropbtn" value="high">High</option>
+                    <option class="dropbtn" value="urgent">Urgent</option>
+                  </div>
+                  </select>
+                </form>
+              <div style="white-space: nowrap;"class="createViewLeft">
+                  <table>
+                    <tr>
+                      <th style="padding-right: 120px">Bug Name:</th>
+                      <th style="float:left; padding-right:50px">Type:</th>
+                      <th style="padding-right:60px">Priority:</th>
+                      <th style="float:left;">Short Description:</th>
+                    </tr>
+                    <tbody id="post_body">
+                    </tbody>
+              </table>
+              </div>
+            </div>
+          </div>  
+        </div>
+      </div>
+    </div>
+      <div class="container">
+          <table id="post" class="table table-striped margin-top-very-big">
+  </body>
+  </html>
