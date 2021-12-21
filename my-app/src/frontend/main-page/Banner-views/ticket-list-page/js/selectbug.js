@@ -12,7 +12,7 @@ var result = null,
         });
     return result;
 }
-
+ 
 async function populateFields(data){
 
 const bug = await window.api.getBugWithID(getParam());
