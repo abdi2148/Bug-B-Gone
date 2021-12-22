@@ -419,6 +419,7 @@ nav .profile-details i{
   overflow:hidden;
   display: table;
   height: 30px;
+  padding-bottom: 60px;
 }
 .sales-boxes .right-sales li{
   display: flex;
@@ -490,7 +491,7 @@ nav .profile-details i{
 .background-right{
   background: rgb(26, 43, 43);
   font-size: 20px;
-  padding: 4px 12px;
+  padding: 4px 2px 12px 4px;
   border-radius: 12px;
   width: 100%;
   overflow: auto;
@@ -551,6 +552,23 @@ nav .profile-details i{
   display: inline-block;
 }
 .createBtn:hover{
+  background-color: rgb(65, 109, 109);
+}
+.deleteBtn{
+  bottom: 12px;
+  position: absolute;
+  right: 178px;
+  color:darkslategray;
+  background: rgb(26, 43, 43);
+  font-weight: 800;
+  font-size: 20px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  border: 2px solid rgb(65, 109, 109);
+  cursor: pointer;
+  display: inline-block;
+}
+.deleteBtn:hover{
   background-color: rgb(65, 109, 109);
 }
 .createUser{
@@ -637,8 +655,8 @@ nav .profile-details i{
   border: 2px solid rgb(65, 109, 109);
   cursor: pointer;
   display: inline-block;
-  bottom: -22px;
-
+  right: 26px;
+  bottom: 5px;
 }
 .dropbtnType:hover{
   background-color: rgb(65, 109, 109);
