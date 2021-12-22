@@ -36,7 +36,7 @@ function populateList(projects){
     projects.forEach(proj=>{
        tr+='<tr type="button" onclick="">';
        tr+='<td class="bugName" value="placeholder">'+ proj.name +'</td>'
-       +'<td class><a style="font-weight: 800;color: rgb(26, 43, 43);background: darkslategray;border-radius: 12px;text-decoration: none; border: 2px solid rgb(65, 109, 109);"href="../edit-project/edit.html?bugId='+proj.id+'">Edit</a>';'</td>'
+       +'<td class><a style="font-weight: 800;color: rgb(26, 43, 43);background: darkslategray;border-radius: 12px;margin-left: 34px;text-decoration: none; padding-left: 35px;padding-right: 35px;border: 2px solid rgb(65, 109, 109);"href="../edit-project/edit.html?bugId='+proj.id+'">Edit</a>';'</td>'
       
        tr+='</tr>';
     
