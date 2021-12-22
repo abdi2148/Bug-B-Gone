@@ -3,7 +3,6 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../ticket-list-page/bug-details.css">
     <script defer src="../../../common_js/appFunctions.js"></script>
-
     <script defer src="../ticket-list-page/js/selectbug.js"></script>
 
     <!-- Boxicons CDN Link -->
@@ -32,7 +31,7 @@
           <i class='bx bx-menu sidebarBtn' style="color:#5B9494;"></i>
           <span class="dashboard">Details</span>
         </div>
-        <div class="search-box" style="color: #5B9494;">
+        <div class="search-box" style="color: #5B9494; visibility: hidden;">
           <input type="text"placeholder="Search...">
           <i class='bx bx-search' ></i>
         </div>
@@ -63,7 +62,12 @@
                   <div class="search-box" style="color: #5B9494;">
                     <i class="title" style="color: #5B9494;;">Description</i>
                     <textarea id="descriptionText"  name="desc" type="text" class="descriptionTxtField" ></textarea>
+
+                  <button type="button" onclick="" class="deleteBtn" title="Create">Delete</button>
+
+
                   <button type="submit" class="createBtn">Save Changes</button>
+
                   <div class="dropdown">
                     <form action="#">
                       <select class="dropbtnPrio" name="prioity" id="prio">
