@@ -23,15 +23,25 @@ const getAllBugs = async() =>{
             console.log('No bugs found');
         }else{
             await snapshot.forEach(doc => {
-                const bug = new Bug(
-                    doc.id,
-                    doc.data().name,
-                    doc.data().desc,
-                    doc.data().shortdesc,
-                    doc.data().type,
-                    doc.data().priority,
-                    doc.data().status
-                );
+                var bug ={
+                    id: doc.data().id,
+                    desc: doc.data().desc,
+                    name: doc.data().name,
+                    priority: doc.data().priority,
+                    shortdesc : doc.data().shortdesc,
+                    status: doc.data().status,
+                    type: doc.data().type,
+                        project :{
+                    projid : doc.data().project.id,
+                    name : doc.data().project.name,
+                    desc : doc.data().project.desc,
+                     },
+                         user :{
+                    userid : doc.data().user.id,
+                    name : doc.data().user.name,
+                    email : doc.data().user.email,
+                     }
+                }
                 bugArray.push(bug);
             });
            return bugArray;

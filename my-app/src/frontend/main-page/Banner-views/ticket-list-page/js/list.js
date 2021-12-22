@@ -1,17 +1,63 @@
+loadList();
+populateProjectDropdown();
+var bugList;
+var timer = 0;
+const searchBox = document.getElementById('searchBoxInput');
+searchBox.addEventListener('change', filterList);
 
-test();
+const searchProject = document.getElementById("projectSearch");
+searchProject.addEventListener('change', filterProjects);
 
+function filterProjects(e){
+   let proj = e.target.value;
+   console.log(proj)
+   var filteredList = [];
+   bugList.forEach(bug =>{
+      console.log(bug.project.projid)
+      text = bug.project.projid
+      if(text == proj){
+         filteredList.push(bug)
+      }
+   })
+   populateList(filteredList)
+}
 
-async function test(){
+function filterList(e){
+   let input = e.target.value;
+   var filteredList = [];
+   bugList.forEach(bug =>{
+      text = bug.name.toLowerCase()
+      if(text.includes(input)){
+         filteredList.push(bug)
+      }
+   })
+   populateList(filteredList)
+}
 
-const getAllBugs = await window.api.getAllBugs();
+async function loadList(){
+   const allBugs = await window.api.getAllBugs();
+   bugList = allBugs;
+   if(timer==0){
+      populateList(bugList);
+      timer++;
+   }
+   return allBugs;
+}
 
-console.log(getAllBugs);
+async function populateProjectDropdown(){
+   const projects = await window.api.getAllProjects();
+   var select = document.getElementById("projectSearch");
+   for(index in projects) {
+   var proj = projects[index];
+   select.options[select.options.length] = new Option(proj.name, proj.id);
+}
+}
 
+function populateList(filteredBugs){
 var table = document.getElementById("post_body");
 table.innerHTML="";
 var tr="";
-getAllBugs.forEach(bug=>{
+filteredBugs.forEach(bug=>{
 
    tr+='<tr type="button" onclick="">';
    tr+='<td class="bugName" value="placeholder">'+ bug.name +'</td>'
