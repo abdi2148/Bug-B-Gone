@@ -24,7 +24,7 @@ const getAllBugs = async() =>{
         }else{
             await snapshot.forEach(doc => {
                 var bug ={
-                    id: doc.data().id,
+                    id: doc.id,
                     desc: doc.data().desc,
                     name: doc.data().name,
                     priority: doc.data().priority,
@@ -60,7 +60,7 @@ const getBugWithID = async(data) => {
             console.log('Doesnt exist');
         }else{
             var bug ={
-                id: snapshot.data().id,
+                id: snapshot.id,
                 desc: snapshot.data().desc,
                 name: snapshot.data().name,
                 priority: snapshot.data().priority,

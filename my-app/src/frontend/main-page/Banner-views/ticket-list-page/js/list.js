@@ -9,16 +9,20 @@ const searchProject = document.getElementById("projectSearch");
 searchProject.addEventListener('change', filterProjects);
 
 function filterProjects(e){
-   let proj = e.target.value;
-   console.log(proj)
+   if(e.target.value != "all"){
+      let proj = e.target.value;
    var filteredList = [];
    bugList.forEach(bug =>{
-      console.log(bug.project.projid)
       text = bug.project.projid
       if(text == proj){
          filteredList.push(bug)
       }
    })
+   }
+   else{
+      filteredList = bugList;
+   }
+   
    populateList(filteredList)
 }
 
@@ -37,10 +41,7 @@ function filterList(e){
 async function loadList(){
    const allBugs = await window.api.getAllBugs();
    bugList = allBugs;
-   if(timer==0){
-      populateList(bugList);
-      timer++;
-   }
+   populateList(allBugs);
    return allBugs;
 }
 
@@ -58,7 +59,6 @@ var table = document.getElementById("post_body");
 table.innerHTML="";
 var tr="";
 filteredBugs.forEach(bug=>{
-
    tr+='<tr type="button" onclick="">';
    tr+='<td class="bugName" value="placeholder">'+ bug.name +'</td>'
    +'<td class="type" value="placeholder">'+ bug.type +'</td>'
