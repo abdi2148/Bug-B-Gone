@@ -23,15 +23,25 @@ const getAllBugs = async() =>{
             console.log('No bugs found');
         }else{
             await snapshot.forEach(doc => {
-                const bug = new Bug(
-                    doc.id,
-                    doc.data().name,
-                    doc.data().desc,
-                    doc.data().shortdesc,
-                    doc.data().type,
-                    doc.data().priority,
-                    doc.data().status
-                );
+                var bug ={
+                    id: doc.id,
+                    desc: doc.data().desc,
+                    name: doc.data().name,
+                    priority: doc.data().priority,
+                    shortdesc : doc.data().shortdesc,
+                    status: doc.data().status,
+                    type: doc.data().type,
+                        project :{
+                    projid : doc.data().project.id,
+                    name : doc.data().project.name,
+                    desc : doc.data().project.desc,
+                     },
+                         user :{
+                    userid : doc.data().user.id,
+                    name : doc.data().user.name,
+                    email : doc.data().user.email,
+                     }
+                }
                 bugArray.push(bug);
             });
            return bugArray;
@@ -49,15 +59,25 @@ const getBugWithID = async(data) => {
         if(!snapshot.exists){
             console.log('Doesnt exist');
         }else{
-            const bug =  new Bug(
-                snapshot.id,
-                snapshot.data().name,
-                snapshot.data().desc,
-                snapshot.data().shortdesc,
-                snapshot.data().type,
-                snapshot.data().priority,
-                snapshot.data().status
-                );
+            var bug ={
+                id: snapshot.id,
+                desc: snapshot.data().desc,
+                name: snapshot.data().name,
+                priority: snapshot.data().priority,
+                shortdesc : snapshot.data().shortdesc,
+                status: snapshot.data().status,
+                type: snapshot.data().type,
+                    project :{
+                projid : snapshot.data().project.id,
+                name : snapshot.data().project.name,
+                desc : snapshot.data().project.desc,
+                 },
+                     user :{
+                userid : snapshot.data().user.id,
+                name : snapshot.data().user.name,
+                email : snapshot.data().user.email,
+                 }
+            }
            return bug;
         }
     } catch (error) {
@@ -67,8 +87,7 @@ const getBugWithID = async(data) => {
 
 const updateBug = async(data) =>{
     try {
-        const bug = await db.collection('bugs').doc(data.id);
-        await bug.update(data);
+        const bug = await db.collection('bugs').doc(data.id).update(data);
         console.log('Bug updated successfully')
     } catch (error) {
         console.log(error);
