@@ -23,11 +23,13 @@ const getAllProjects = async() =>{
             console.log('No projects found');
         }else{
             await snapshot.forEach(doc => {
-                const project = new Project(
-                    doc.id,
-                    doc.data().name,
-                    doc.data().desc
-                );
+                const project ={
+                    id: doc.id,
+                    name: doc.data().name,
+                    desc: doc.data().desc,
+                    users: doc.data().users
+                }
+                if(project.users == undefined) project.users = [];
                 projectArray.push(project);
             });
             return projectArray;
@@ -39,17 +41,20 @@ const getAllProjects = async() =>{
 
 const getProjectWithID = async(data) =>{
     try {
+        console.log(data)
         const dataref = await db.collection('projects').doc(data);
         const snapshot = await dataref.get();
 
         if(snapshot.empty){
             console.log('Project with the given id not found');
         }else{
-            const project = new Project(
-                snapshot.id,
-                snapshot.data().name,
-                snapshot.data().desc
-            );
+            const project ={
+                id: snapshot.id,
+                name: snapshot.data().name,
+                desc: snapshot.data().desc,
+                users: snapshot.data().users
+                }
+                if(project.users == undefined) project.users = []
             return project;
         }
     } catch (error) {

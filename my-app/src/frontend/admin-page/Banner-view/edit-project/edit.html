@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../edit-project/edit.css">
     <script defer src="../../../common_js/appFunctions.js"></script>
+    <script defer src="../../Banner-view/edit-project/js/selectProject.js"></script>
 
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -54,25 +55,31 @@
         <div class="title">Edit Project</div>
           <div class="createView">
             <div class="createUser">
+              <form action="#" id="update"> 
               <div class="search-box" style="color: #5B9494;">
                 <i class="title" style="color: #5B9494;;">Name</i>
-                <input class="nameTxtField" type="text" placeholder="">
+                <input class="nameTxtField" type="text" placeholder="" id="inputTextName">
               </div>
               <div class="search-box" style="color: #5B9494;">
                 <i class="title" style="color: #5B9494;;">Description</i>
-                <textarea class="descriptionTxtField"  name="editProjectTxtField"></textarea>
+                <textarea class="descriptionTxtField"  name="editProjectTxtField" id="descriptionText"></textarea>
               </div>
             </div>
           </div>
-          <button type="button" onclick="" class="deleteBtn" title="Delete">Delete</button>
-          <button type="button" onclick="" class="createBtn" title="Create">Edit Project</button>
+          
+          <button type="update"  class="createBtn" title="Create" id="updateBtn">Update</button>
+        </form>
+        <form action="#" id="delete"> 
+        <button type="delete" class="deleteBtn" title="Delete" id="deleteBtn">Delete</button>
+         </form>
           <div class="dropdown">
             <form action="#">
+              
             </form>
           </div>
       </div>
       <div class="right-sales box"; style="margin-left: 10px;">
-        <div class="title">Current Projects</div>
+        <div class="title">Assigned Users</div>
             <div class="background-right">
               <div class="createView">
                 </a>     
@@ -84,12 +91,9 @@
             </table>
             </div>
       </div>
-      <label style="position: absolute; right: 173px; bottom: 12px;font-size: 19px;">anything:</label>
+      <label style="position: absolute; right: 173px; bottom: 12px;font-size: 19px;">Add User:</label>
       <form action="#">
-        <select class="dropbtnType" name="type" id="type">
-          <option class="dropbtn" value="frontend">Frontend</option>
-          <option class="dropbtn" value="backend">Backend</option>
-          <option class="dropbtn" value="fullstack">Fullstack</option>
+        <select class="dropbtnType" name="type" id="addUser">
         </div>
         </select>
       </form>

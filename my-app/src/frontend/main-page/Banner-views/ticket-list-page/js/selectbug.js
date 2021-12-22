@@ -1,5 +1,6 @@
 populateFields();
 const form = document.querySelector('#signup');
+//const deleteBtn = document.querySelector('#delete');
 var bugOGID;
 
 async function populateSelectProject(projectId){
@@ -15,6 +16,12 @@ for(index in projects) {
 }
 return optionIndex
 }
+
+//deleteBtn.addEventListener('submit', async (event) =>{
+//  event.preventDefault();
+ // await window.api.deleteBug(bugOGID)
+  //window.location.href = 'ticket-list-page.html'
+//});
 
 async function populateSelectUser(userID){
     const users = await window.api.getAllUsers();
@@ -105,6 +112,7 @@ var objectToPass ={
   }
 }
 updateBug(objectToPass)
+window.location.href = 'ticket-list-page.html'
 });
 
 async function updateBug(data){
