@@ -1,96 +1,106 @@
 /* Googlefont Poppins CDN Link */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-.sidebar{
+.sidebar {
   position: fixed;
   height: 100%;
   width: 240px;
   background: rgb(26, 43, 43);
   transition: all 0.5s ease;
-  border-right:  1px solid black;
+  border-right: 1px solid black;
 }
-.sidebar.active{
+.sidebar.active {
   width: 60px;
 }
-.sidebar .logo-details{
+.sidebar .logo-details {
   height: 80px;
   display: flex;
   align-items: center;
-  background: url('https://api.iconify.design/clarity/bug-line.svg?color=%235b9494') no-repeat center center / contain;
+  background: url("https://api.iconify.design/clarity/bug-line.svg?color=%235b9494")
+    no-repeat center center / contain;
 }
-.sidebar .logo-details i{
+.sidebar .logo-details i {
   font-size: 28px;
   font-weight: 500;
   color: black;
   min-width: 60px;
-  text-align: center
+  text-align: center;
 }
-.sidebar .logo-details .logo_name{
+.sidebar .logo-details .logo_name {
   color: #fff;
   font-size: 24px;
   font-weight: 500;
 }
-.sidebar .nav-links{
+.sidebar .nav-links {
   margin-top: 10px;
+  -webkit-app-region: no-drag;
 }
-.sidebar .nav-links li{
+.sidebar .nav-links li {
   position: relative;
   list-style: none;
   height: 50px;
+  -webkit-app-region: no-drag;
 }
-.sidebar .nav-links li a{
+.sidebar .nav-links li a {
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   text-decoration: none;
   transition: all 0.4s ease;
+  -webkit-app-region: no-drag;
 }
-.sidebar .nav-links li a.active{
+.sidebar .nav-links li a.active {
   background: rgb(0, 0, 0);
+  -webkit-app-region: no-drag;
 }
-.sidebar .nav-links li a:hover{
+.sidebar .nav-links li a:hover {
   background: rgb(69, 104, 104);
+  -webkit-app-region: no-drag;
 }
-.sidebar .nav-links li i{
+.sidebar .nav-links li i {
   min-width: 60px;
   text-align: center;
   font-size: 18px;
-  color: #5B9494;
+  color: #5b9494;
+  -webkit-app-region: no-drag;
 }
-.sidebar .nav-links li a .links_name{
+.sidebar .nav-links li a .links_name {
   color: darkslategray;
   font-size: 15px;
   font-weight: 400;
   white-space: nowrap;
   font-size: larger;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-style: normal;
+  -webkit-app-region: no-drag;
 }
-.sidebar .nav-links .log_out{
+.sidebar .nav-links .log_out {
   position: absolute;
   bottom: 0;
   width: 100%;
+  -webkit-app-region: no-drag;
 }
-.home-section{
+.home-section {
   position: relative;
   background-color: red;
-  background: url('https://api.iconify.design/clarity/bug-line.svg?color=%231a2b2b&rotate=90deg') no-repeat center center / contain;
+  background: url("https://api.iconify.design/clarity/bug-line.svg?color=%231a2b2b&rotate=90deg")
+    no-repeat center center / contain;
   min-height: 100vh;
   width: calc(100% - 240px);
   left: 240px;
   transition: all 0.5s ease;
 }
-.sidebar.active ~ .home-section{
+.sidebar.active ~ .home-section {
   width: calc(100% - 60px);
   left: 60px;
 }
-.home-section nav{
+.home-section nav {
   display: flex;
   justify-content: space-between;
   height: 91px;
@@ -105,18 +115,17 @@
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   transition: all 0.5s ease;
 }
-.sidebar.active ~ .home-section nav{
+.sidebar.active ~ .home-section nav {
   left: 60px;
   width: calc(100% - 60px);
 }
-.home-section nav .sidebar-button{
+.home-section nav .sidebar-button {
   display: flex;
   align-items: center;
   font-size: 24px;
   font-weight: 500;
-
 }
-.titleBarBtns > .topBtn{
+.titleBarBtns > .topBtn {
   width: 40px;
   height: 40px;
   border: none;
@@ -126,44 +135,49 @@
   background-position: center;
   transition: 0.2s;
   cursor: pointer;
-
-  
+  -webkit-app-region: no-drag;
 }
-.titleBarBtns > .topBtn:hover{
+.titleBarBtns > .topBtn:hover {
   background-color: rgb(65, 109, 109);
-  
+  -webkit-app-region: no-drag;
 }
-.titleBarBtns > .topBtn:active{
-  background-color: #4F9FEE;
+.titleBarBtns > .topBtn:active {
+  background-color: #4f9fee;
+  -webkit-app-region: no-drag;
 }
-.titleBarBtns > .minimizeBtn{
+.titleBarBtns > .minimizeBtn {
   padding-left: 5px;
   position: relative;
-  background-image: url('../edit-project/icons/icon_minimize.png');
+  background-image: url("../edit-project/icons/icon_minimize.png");
+  -webkit-app-region: no-drag;
 }
-.titleBarBtns > .maximizeBtn{
-  background-image: url('../edit-project/icons/icon_maximize.png');
+.titleBarBtns > .maximizeBtn {
+  background-image: url("../edit-project/icons/icon_maximize.png");
+  -webkit-app-region: no-drag;
 }
-.titleBarBtns > .restoreBtn{
-  background-image: url('../edit-project/icons/icon_restore.png');
+.titleBarBtns > .restoreBtn {
+  background-image: url("../edit-project/icons/icon_restore.png");
+  -webkit-app-region: no-drag;
 }
-.titleBarBtns > .closeBtn{
-  background-image: url('../edit-project/icons/icon_close.png');
+.titleBarBtns > .closeBtn {
+  background-image: url("../edit-project/icons/icon_close.png");
+  -webkit-app-region: no-drag;
 }
-nav .sidebar-button i{
+nav .sidebar-button i {
   font-size: 35px;
   margin-right: 10px;
-  
+  -webkit-app-region: no-drag;
 }
-.home-section nav .search-box{
-  position: absolute; left: 270px;
+.home-section nav .search-box {
+  position: absolute;
+  left: 270px;
   height: 50px;
   max-width: 350px;
   width: 100%;
-  margin: 0 20px;  
-    
+  margin: 0 20px;
+  -webkit-app-region: no-drag;
 }
-nav .search-box input{
+nav .search-box input {
   height: 100%;
   width: 100%;
   outline: none;
@@ -172,10 +186,11 @@ nav .search-box input{
   border-radius: 6px;
   font-size: 18px;
   padding: 0 15px;
-  color: #5B9494;
+  color: #5b9494;
   font-weight: 800;
+  -webkit-app-region: no-drag;
 }
-nav .search-box .bx-search{
+nav .search-box .bx-search {
   position: absolute;
   height: 40px;
   width: 40px;
@@ -186,11 +201,12 @@ nav .search-box .bx-search{
   border-radius: 4px;
   line-height: 40px;
   text-align: center;
-  color: #5B9494;
+  color: #5b9494;
   font-size: 22px;
   transition: all 0.4 ease;
+  -webkit-app-region: no-drag;
 }
-.home-section nav .profile-details{
+.home-section nav .profile-details {
   display: flex;
   align-items: center;
   background: darkslategrey;
@@ -199,32 +215,40 @@ nav .search-box .bx-search{
   height: 50px;
   min-width: 190px;
   padding: 0 15px 0 2px;
-  position: absolute; right: 150px
+  -webkit-app-region: no-drag;
+
+  position: absolute;
+  right: 150px;
 }
-nav .profile-details img{
+nav .profile-details img {
   height: 40px;
   width: 40px;
   border-radius: 6px;
   object-fit: cover;
+  -webkit-app-region: no-drag;
 }
-nav .profile-details .admin_name{
+nav .profile-details .admin_name {
   font-size: 15px;
   font-weight: 500;
-  color: #5B9494;
+  color: #5b9494;
   margin: 0 10px;
   white-space: nowrap;
-  position: absolute; 
+  position: absolute;
+  -webkit-app-region: no-drag;
 }
-nav .profile-details i{
+nav .profile-details i {
   font-size: 25px;
-  color: #5B9494;
-  position: absolute; right:0px;
+  color: #5b9494;
+  position: absolute;
+  right: 0px;
+  -webkit-app-region: no-drag;
 }
-.home-section .home-content{
+.home-section .home-content {
   position: relative;
   padding-top: 104px;
+  -webkit-app-region: no-drag;
 }
-.home-content .overview-boxes{
+.home-content .overview-boxes {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -233,34 +257,34 @@ nav .profile-details i{
   margin-bottom: 26px;
   opacity: 90%;
 }
-.overview-boxes .box{
+.overview-boxes .box {
   display: flex;
   align-items: center;
   justify-content: center;
   width: calc(100% / 4 - 15px);
-  background: #5B9494;
+  background: #5b9494;
   padding: 15px 14px;
   border-radius: 12px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
-.overview-boxes .box-topic{
+.overview-boxes .box-topic {
   font-size: 20px;
   font-weight: 500;
 }
-.home-content .box .number{
+.home-content .box .number {
   display: inline-block;
   font-size: 35px;
   margin-top: -6px;
   font-weight: 500;
 }
-.home-content .box .indicator{
+.home-content .box .indicator {
   display: flex;
   align-items: center;
 }
-.home-content .box .indicator i{
+.home-content .box .indicator i {
   height: 20px;
   width: 20px;
-  background: #8FDACB;
+  background: #8fdacb;
   line-height: 20px;
   text-align: center;
   border-radius: 50%;
@@ -268,13 +292,13 @@ nav .profile-details i{
   font-size: 20px;
   margin-right: 5px;
 }
-.box .indicator i.down{
+.box .indicator i.down {
   background: #e87d88;
 }
-.home-content .box .indicator .text{
+.home-content .box .indicator .text {
   font-size: 12px;
 }
-.home-content .box .cart{
+.home-content .box .cart {
   display: inline-block;
   font-size: 32px;
   height: 50px;
@@ -286,38 +310,38 @@ nav .profile-details i{
   border-radius: 12px;
   margin: -15px 0 0 6px;
 }
-.home-content .box .cart.two{
-   color: #2BD47D;
-   background: #C0F2D8;
- }
-.home-content .box .cart.three{
-   color: #ffc233;
-   background: #ffe8b3;
- }
-.home-content .box .cart.four{
-   color: #e05260;
-   background: #f7d4d7;
- }
-.home-content .total-order{
+.home-content .box .cart.two {
+  color: #2bd47d;
+  background: #c0f2d8;
+}
+.home-content .box .cart.three {
+  color: #ffc233;
+  background: #ffe8b3;
+}
+.home-content .box .cart.four {
+  color: #e05260;
+  background: #f7d4d7;
+}
+.home-content .total-order {
   font-size: 20px;
   font-weight: 500;
 }
-.home-content .sales-boxes{
+.home-content .sales-boxes {
   display: flex;
   justify-content: space-between;
   opacity: 90%;
 }
 
 /* left box */
-.home-content .sales-boxes .recent-sales{
+.home-content .sales-boxes .recent-sales {
   width: 65%;
-  background: #5B9494;
+  background: #5b9494;
   padding: 20px 30px;
   margin: 0 20px;
   border-radius: 12px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
-.home-content .sales-boxes .sales-details{
+.home-content .sales-boxes .sales-details {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -329,27 +353,29 @@ nav .profile-details i{
   opacity: 90%;
   color: rgb(26, 43, 43);
   font-weight: 800;
- 
+
   /* margin-bottom: 10px; */
 }
-.sales-boxes .userViewBtns{
+.sales-boxes .userViewBtns {
   background-color: transparent;
   position: relative;
+  -webkit-app-region: no-drag;
 }
-.userViewBtns .editBtn{
+.userViewBtns .editBtn {
   background-color: darkslategray;
-  color: #5B9494;
+  color: #5b9494;
   font-size: 20px;
   padding: 1px 10px;
   margin: 0 10px 0 0;
   border-radius: 10px;
   font-weight: 800;
   opacity: 90%;
-  margin-left: 49%
+  -webkit-app-region: no-drag;
+  margin-left: 49%;
 }
-.sales-boxes .userViewBtns .createBtn{
+.sales-boxes .userViewBtns .createBtn {
   background-color: darkslategray;
-  color: #5B9494;
+  color: #5b9494;
   font-size: 20px;
   padding: 1px 10px;
   margin: 0 10px 0 0;
@@ -359,10 +385,11 @@ nav .profile-details i{
   top: 150%;
   margin-left: 53%;
   margin-top: 70%;
+  -webkit-app-region: no-drag;
 }
-.userViewBtns .deleteBtn{
+.userViewBtns .deleteBtn {
   background-color: darkslategray;
-  color: #5B9494;
+  color: #5b9494;
   font-size: 20px;
   font-size: 20px;
   padding: 1px 10px;
@@ -370,28 +397,30 @@ nav .profile-details i{
   border-radius: 10px;
   font-weight: 800;
   opacity: 90%;
+  -webkit-app-region: no-drag;
 }
-.sales-boxes .sales-details li.topic{
+.sales-boxes .sales-details li.topic {
   font-size: 20px;
   font-weight: 500;
 }
-.sales-boxes .sales-details li{
+.sales-boxes .sales-details li {
   list-style: none;
   margin: 8px 0;
 }
-.sales-boxes .sales-details li a{
+.sales-boxes .sales-details li a {
   font-size: 18px;
   color: #333;
   font-size: 400;
   text-decoration: none;
 }
-.sales-boxes .box .button{
+.sales-boxes .box .button {
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  -webkit-app-region: no-drag;
 }
-.sales-boxes .box .button a{
-  color: #5B9494;
+.sales-boxes .box .button a {
+  color: #5b9494;
   background: darkslategray;
   padding: 4px 12px;
   font-size: 15px;
@@ -399,35 +428,36 @@ nav .profile-details i{
   border-radius: 4px;
   text-decoration: none;
   transition: all 0.3s ease;
+  -webkit-app-region: no-drag;
 }
-.sales-boxes .box .button a:hover{
-  background:  #0d3073;
+.sales-boxes .box .button a:hover {
+  background: #0d3073;
 }
-.sidebar-button .dashboard{
-  color: #5B9494;
+.sidebar-button .dashboard {
+  color: #5b9494;
 }
 /* Right box */
-.home-content .sales-boxes .right-sales{
+.home-content .sales-boxes .right-sales {
   width: 40%;
-  background:  #5B9494;
+  background: #5b9494;
   padding: 20px 30px;
   margin: 0 20px 0 0;
   border-radius: 12px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   height: 20%;
   position: relative;
-  overflow:hidden;
+  overflow: hidden;
   display: table;
   height: 30px;
   padding-bottom: 60px;
 }
-.sales-boxes .right-sales li{
+.sales-boxes .right-sales li {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 10px 0;
 }
-.sales-boxes .right-sales li a img{
+.sales-boxes .right-sales li a img {
   height: 40px;
   width: 40px;
   object-fit: cover;
@@ -435,35 +465,35 @@ nav .profile-details i{
   margin-right: 10px;
   background: #333;
 }
-.sales-boxes .right-sales li a{
+.sales-boxes .right-sales li a {
   display: flex;
   align-items: center;
   text-decoration: none;
 }
 .sales-boxes .right-sales li .product,
-.price{
+.price {
   font-size: 17px;
   font-weight: 400;
   color: #333;
 }
 /* Left box */
-.home-content .sales-boxes .left-sales{
+.home-content .sales-boxes .left-sales {
   position: relative;
   width: 50%;
-  background:  #5B9494;
+  background: #5b9494;
   padding: 20px 30px;
   margin: 0 20px 0 0;
   border-radius: 12px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   height: 350px;
 }
-.sales-boxes .left-sales li{
+.sales-boxes .left-sales li {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 10px 0;
 }
-.sales-boxes .left-sales li a img{
+.sales-boxes .left-sales li a img {
   height: 40px;
   width: 40px;
   object-fit: cover;
@@ -471,42 +501,45 @@ nav .profile-details i{
   margin-right: 10px;
   background: #333;
 }
-.sales-boxes .left-sales li a{
+.sales-boxes .left-sales li a {
   display: flex;
   align-items: center;
   text-decoration: none;
 }
 .sales-boxes .left-sales li .product,
-.price{
+.price {
   font-size: 17px;
   font-weight: 400;
   color: #333;
 }
 /* Edit User*/
-.createUser{
+.createUser {
   font-weight: 800;
   width: 10%;
-  color: #5B9494; 
+  color: #5b9494;
+  -webkit-app-region: no-drag;
 }
-.background-right{
+.background-right {
   background: rgb(26, 43, 43);
   font-size: 20px;
   padding: 4px 2px 12px 4px;
   border-radius: 12px;
   width: 100%;
   overflow: auto;
-  color: #5B9494; 
+  color: #5b9494;
+  -webkit-app-region: no-drag;
 }
-.createView{
+.createView {
   width: 100%;
   position: relative;
   line-height: 35px;
+  -webkit-app-region: no-drag;
 }
- .deleteBtn{
-  position:absolute;
+.deleteBtn {
+  position: absolute;
   right: 0px;
   bottom: -2px;
-  color:rgb(26, 43, 43);
+  color: rgb(26, 43, 43);
   background: rgb(65, 109, 109);
   font-weight: 1000;
   font-size: 15px;
@@ -515,16 +548,17 @@ nav .profile-details i{
   border: 2px solid rgb(65, 109, 109);
   cursor: pointer;
   display: inline-block;
+  -webkit-app-region: no-drag;
 }
-.deleteBtn:hover{
-  background-color: #5B9494;
+.deleteBtn:hover {
+  background-color: #5b9494;
 }
- .editBtn{
-  position:absolute;
+.editBtn {
+  position: absolute;
   right: 68px;
   bottom: -2px;
   margin-right: 2px;
-  color:rgb(26, 43, 43);
+  color: rgb(26, 43, 43);
   background: rgb(65, 109, 109);
   font-weight: 1000;
   font-size: 15px;
@@ -532,16 +566,18 @@ nav .profile-details i{
   border-radius: 12px;
   border: 2px solid rgb(65, 109, 109);
   cursor: pointer;
+  -webkit-app-region: no-drag;
 }
-.editBtn:hover{
+.editBtn:hover {
   background-color: rgb(65, 109, 109);
-  background-color: #5B9494;
+  background-color: #5b9494;
+  -webkit-app-region: no-drag;
 }
-.createBtn{
+.createBtn {
   bottom: 12px;
   position: absolute;
   right: 28px;
-  color:darkslategray;
+  color: darkslategray;
   background: rgb(26, 43, 43);
   font-weight: 800;
   font-size: 20px;
@@ -550,15 +586,18 @@ nav .profile-details i{
   border: 2px solid rgb(65, 109, 109);
   cursor: pointer;
   display: inline-block;
+  -webkit-app-region: no-drag;
 }
-.createBtn:hover{
+.createBtn:hover {
   background-color: rgb(65, 109, 109);
+  -webkit-app-region: no-drag;
 }
-.deleteBtn{
+
+.deleteBtn {
   bottom: 12px;
   position: absolute;
   right: 178px;
-  color:darkslategray;
+  color: darkslategray;
   background: rgb(26, 43, 43);
   font-weight: 800;
   font-size: 20px;
@@ -568,48 +607,52 @@ nav .profile-details i{
   cursor: pointer;
   display: inline-block;
 }
-.deleteBtn:hover{
+.deleteBtn:hover {
   background-color: rgb(65, 109, 109);
 }
-.createUser{
+.createUser {
   background: rgb(26, 43, 43);
   font-size: 20px;
   padding: 4px 12px;
   border-radius: 12px;
   width: 100%;
   height: 235px;
+  -webkit-app-region: no-drag;
 }
-.createUser .title{
+.createUser .title {
   margin-right: 50px;
   font-size: 20px;
+  -webkit-app-region: no-drag;
 }
 .search-box .nameTxtField {
-  background-color: darkslategray; 
-  font-weight: 800; 
-  color: #5B9494; 
+  background-color: darkslategray;
+  font-weight: 800;
+  color: #5b9494;
   width: 100%;
   border-radius: 6px;
   border: 2px solid rgb(65, 109, 109);
   height: 35px;
   font-size: 20px;
+  -webkit-app-region: no-drag;
 }
 .search-box .descriptionTxtField {
-  background-color: darkslategray; 
-  font-weight: 800; 
-  color: #5B9494; 
+  background-color: darkslategray;
+  font-weight: 800;
+  color: #5b9494;
   width: 100%;
   border-radius: 6px;
   border: 2px solid rgb(65, 109, 109);
   height: 115px;
   font-size: 20px;
   resize: none;
+  -webkit-app-region: no-drag;
 }
-.projectName{
+.projectName {
   position: relative;
   height: 31px;
   width: 100%;
   margin-right: 2px;
-  color:rgb(65, 109, 109);
+  color: rgb(65, 109, 109);
   background: rgb(26, 43, 43);
   font-weight: 1000;
   font-size: 20px;
@@ -617,14 +660,16 @@ nav .profile-details i{
   border-radius: 12px;
   border: 2px solid rgb(65, 109, 109);
   cursor: pointer;
-  text-align:left;
+  text-align: left;
   margin-bottom: 4px;
   line-height: 25px;
+  -webkit-app-region: no-drag;
 }
-.projectName:hover{
-  background-color: #5B9494;
+.projectName:hover {
+  background-color: #5b9494;
+  -webkit-app-region: no-drag;
 }
-.dropbtn{
+.dropbtn {
   position: absolute;
   color: darkslategray;
   background: rgb(26, 43, 43);
@@ -635,16 +680,19 @@ nav .profile-details i{
   border: 2px solid rgb(65, 109, 109);
   cursor: pointer;
   display: inline-block;
-  bottom:11px;
+  bottom: 11px;
+  -webkit-app-region: no-drag;
 }
-.dropbtn:hover{
+.dropbtn:hover {
   background-color: rgb(65, 109, 109);
+  -webkit-app-region: no-drag;
 }
 .dropdown {
   position: relative;
   display: inline-block;
+  -webkit-app-region: no-drag;
 }
-.dropbtnType{
+.dropbtnType {
   position: absolute;
   color: darkslategrey;
   background: rgb(26, 43, 43);
@@ -655,9 +703,12 @@ nav .profile-details i{
   border: 2px solid rgb(65, 109, 109);
   cursor: pointer;
   display: inline-block;
+  bottom: -22px;
+  -webkit-app-region: no-drag;
   right: 26px;
   bottom: 5px;
 }
-.dropbtnType:hover{
+.dropbtnType:hover {
   background-color: rgb(65, 109, 109);
+  -webkit-app-region: no-drag;
 }
