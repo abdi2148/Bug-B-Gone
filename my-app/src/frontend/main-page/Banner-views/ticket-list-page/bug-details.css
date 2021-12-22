@@ -619,6 +619,23 @@ nav .profile-details i{
     -webkit-app-region: no-drag;
 
 }
+.deleteBtn{
+  position: absolute;
+  right: 200px;
+  bottom: 13px;
+  color: rgb(26, 43, 43);
+  background: darkslategray;
+  font-weight: 800;
+  font-size: 20px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  border: 2px solid rgb(65, 109, 109);
+  cursor: pointer;
+  display: inline-block;
+}
+.deleteBtn:hover{
+  background-color: rgb(65, 109, 109);
+}
 .createUser{
   background: rgb(26, 43, 43);
   font-size: 20px;

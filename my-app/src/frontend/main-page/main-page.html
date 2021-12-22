@@ -1,8 +1,8 @@
 <!DOCTYPE html>
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="main-page.css">
-    <script defer src="../../frontend/common_js/appFunctions.js"></script>
+    <link rel="stylesheet" href="../main-page/main-page.css">
+    <script defer src="../common_js/appFunctions.js"></script>
 
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -21,12 +21,6 @@
           </a>
         </li>
         <li>
-          <a href="../main-page/Banner-views/project-page/project-page.html">
-            <i class='bx bx-pie-chart-alt-2' ></i>
-            <span class="links_name">Project Overview</span>
-          </a>
-        </li>
-        <li>
           <a href="../main-page/Banner-views/ticket-list-page/ticket-list-page.html">
             <i class='bx bx-list-ul' ></i>
             <span class="links_name">Tickets List</span>
@@ -38,31 +32,32 @@
             <span class="links_name">Create ticket</span>
           </a>
         </li>
-        <li>
-          <a href="../admin-page/admin-page.html">
-            <i class='bx bx-user'></i>
-            <span class="links_name">Admin</span>
+          <li>
+            <a href="../admin-page/Banner-view/edit-project/edit-project.html">
+              <i class='bx bx-user'></i>
+              <span class="links_name">Admin</span>
+              </a>
+          </li>
+          <li class="log_out">
+            <a href="../../../login-page/login-page.html">
+              <i class='bx bx-log-out'></i>
+              <span class="links_name">Log out</span>
             </a>
-        </li>
-        <li class="log_out">
-          <a href="../login-page/login-page.html">
-            <i class='bx bx-log-out'></i>
-            <span class="links_name">Log out</span>
-          </a>
-        </li>
-    </div>
+          </li>
+  </div>
+  
     <section class="home-section" style="background-color: darkslategray;">
       <nav>
         <div class="sidebar-button">
-          <span class="dashboard">Dashboard</span>
+          <span class="dashboard">Project overview</span>
         </div>
-        <div class="search-box" style="color: #5B9494;">
+        <div class="search-box" style="color: #5B9494; visibility: hidden;">
           <input type="text" placeholder="Search...">
-          <i class='bx bx-search' ></i>
+          <i class='bx bx-search'></i>
         </div>
         <div class="profile-details">
           <span class="admin_name">Abdi</span>
-          <i class='bx bx-chevron-down' ></i>
+          <i class='bx bx-chevron-down'></i>
         </div>
         <div class="titleBarBtns">
           <button id="minimizeBtn" class="topBtn minimizeBtn" title="Minimize"></button>
@@ -70,49 +65,42 @@
           <button id="closeBtn" class="topBtn closeBtn" title="Close"></button>
       </div>
       </nav>
-  
-      <div class="home-content">
+            <div class="home-content">
         <div class="overview-boxes">
           <div class="box">
             <div class="right-side">
-              <div class="box-topic">Number of users</div>
-              <div class="number">50</div>
+              <div class="box-topic">Assigned Users:</div>
+              <div style="padding-left: 30%;"class="number">50</div>
               <div class="indicator">
               </div>
             </div>
           </div>
           <div class="box">
             <div class="right-side">
-              <div class="box-topic">Total Bugs</div>
-              <div class="number">50</div>
+              <div class="box-topic">Live bugs:</div>
+              <div style="padding-left: 25%;"class="number">50</div>
               <div class="indicator">
               </div>
             </div>
           </div>
           <div class="box">
             <div class="right-side">
-              <div class="box-topic">Total Members</div>
-              <div class="number">3</div>
+              <div class="box-topic">Users Online:</div>
+              <div style="padding-left: 40%;"class="number">3</div>
               <div class="indicator">
               </div>
             </div>
           </div>
         </div>
-  
         <div class="sales-boxes">
           <div class="recent-sales box">
-            <div class="title">Recent Tickets</div>
-            <div class="sales-details">
+            <div class="title">Recent Tickets:</div>
+            <div class="sales-details"> 
               <ul class="details">
                 <li class="topic">Date</li>
                 11/11/2021
               </ul>
-              <ul class="details">
-              <li class="topic">Description</li>
-              Ladybug
-            </ul>
             <ul class="details">
-
             </ul>
             <ul class="details">
               <li class="topic">Priority</li>
@@ -122,16 +110,14 @@
               <li class="topic">Member</li>
               Abdi
             </ul>
+            <ul class="details">
+              <li class="topic">Short Description</li>
+              Ladybug
+            </ul>
             </div>
-            <div class="button">
-              <a href="#">See All</a>
-            </div>
+            <a href="../main-page/Banner-views/project-page/finnished-tasks.html">
+            <button class="createBtn">Finnished Tickets</button></a>
           </div>
-          <div class="top-sales box">
-            <div class="title">Selected Ticket Overview</div>
-            <ul class="top-sales-details">
-      </div>
-    </section>
-</body>
+  </body>
   </html>
   

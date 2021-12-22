@@ -268,6 +268,13 @@ nav .profile-details i {
   padding: 15px 14px;
   border-radius: 12px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  background: rgb(26, 43, 43);
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  color: #5b9494;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 4px solid rgb(65, 109, 109);
 }
 .overview-boxes .box-topic {
   font-size: 20px;
@@ -278,6 +285,7 @@ nav .profile-details i {
   font-size: 35px;
   margin-top: -6px;
   font-weight: 500;
+  padding-top: 10px;
 }
 .home-content .box .indicator {
   display: flex;
@@ -333,20 +341,40 @@ nav .profile-details i {
   justify-content: space-between;
   opacity: 90%;
 }
-
+.createBtn {
+  position: absolute;
+  right: 13px;
+  color: rgb(26, 43, 43);
+  background: darkslategray;
+  font-weight: 800;
+  font-size: 20px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  border: 2px solid rgb(65, 109, 109);
+  cursor: pointer;
+  display: inline-block;
+}
+.createBtn:hover {
+  background-color: rgb(65, 109, 109);
+}
 /* left box */
 .home-content .sales-boxes .recent-sales {
   width: 65%;
   background: #5b9494;
+  width: 100%;
+  background: rgb(26, 43, 43);
   padding: 20px 30px;
   margin: 0 20px;
   border-radius: 12px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  color: #5b9494;
+  border: 4px solid rgb(65, 109, 109);
+  position: relative;
+  padding-bottom: 58px;
 }
 .home-content .sales-boxes .sales-details {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 .sales-boxes .box .title {
   font-size: 24px;
@@ -355,7 +383,8 @@ nav .profile-details i {
 }
 .sales-boxes .sales-details li.topic {
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 800;
+  padding-right: 35px;
 }
 .sales-boxes .sales-details li {
   list-style: none;
@@ -366,6 +395,10 @@ nav .profile-details i {
   color: #333;
   font-size: 400;
   text-decoration: none;
+}
+
+.details {
+  overflow: hidden;
 }
 .sales-boxes .box .button {
   width: 100%;
@@ -388,6 +421,7 @@ nav .profile-details i {
   background: rgb(69, 104, 104);
   -webkit-app-region: no-drag;
 }
+
 /* Right box */
 .home-content .sales-boxes .top-sales {
   width: 35%;
@@ -396,6 +430,7 @@ nav .profile-details i {
   margin: 0 20px 0 0;
   border-radius: 12px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  color: rgb(26, 43, 43);
 }
 .sales-boxes .top-sales li {
   display: flex;
