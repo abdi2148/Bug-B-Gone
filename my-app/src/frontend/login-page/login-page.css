@@ -1,6 +1,6 @@
 body,
 .signin {
-  background-color: darkslategray;
+  background-color: black;
   font-size: 14px;
   letter-spacing: 1px;
   font-weight: 800;
@@ -172,4 +172,43 @@ a {
   position: relative;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.2);
+}
+
+.titleBarBtns > .topBtn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.2s;
+  cursor: pointer;
+  -webkit-app-region: no-drag;
+}
+.titleBarBtns > .topBtn:hover {
+  background-color: rgb(65, 109, 109);
+  -webkit-app-region: no-drag;
+}
+.titleBarBtns > .topBtn:active {
+  background-color: #4f9fee;
+  -webkit-app-region: no-drag;
+}
+.titleBarBtns > .minimizeBtn {
+  padding-left: 5px;
+  position: relative;
+  background-image: url("../main-page/icons/icon_minimize.png");
+  -webkit-app-region: no-drag;
+}
+.titleBarBtns > .maximizeBtn {
+  background-image: url("../main-page/icons/icon_maximize.png");
+  -webkit-app-region: no-drag;
+}
+.titleBarBtns > .restoreBtn {
+  background-image: url("../main-page/icons/icon_restore.png");
+  -webkit-app-region: no-drag;
+}
+.titleBarBtns > .closeBtn {
+  background-image: url("../main-page/icons/icon_close.png");
+  -webkit-app-region: no-drag;
 }
