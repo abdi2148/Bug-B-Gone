@@ -37,11 +37,15 @@
 }
 .sidebar .nav-links{
   margin-top: 10px;
+    -webkit-app-region: no-drag;
+
 }
 .sidebar .nav-links li{
   position: relative;
   list-style: none;
   height: 50px;
+    -webkit-app-region: no-drag;
+
 }
 .sidebar .nav-links li a{
   height: 100%;
@@ -50,18 +54,26 @@
   align-items: center;
   text-decoration: none;
   transition: all 0.4s ease;
+    -webkit-app-region: no-drag;
+
 }
 .sidebar .nav-links li a.active{
   background: rgb(0, 0, 0);
+    -webkit-app-region: no-drag;
+
 }
 .sidebar .nav-links li a:hover{
   background: rgb(69, 104, 104);
+    -webkit-app-region: no-drag;
+
 }
 .sidebar .nav-links li i{
   min-width: 60px;
   text-align: center;
   font-size: 18px;
   color: #5B9494;
+    -webkit-app-region: no-drag;
+
 }
 .sidebar .nav-links li a .links_name{
   color: darkslategray;
@@ -71,11 +83,15 @@
   font-size: larger;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-style: normal;
+    -webkit-app-region: no-drag;
+
 }
 .sidebar .nav-links .log_out{
   position: absolute;
   bottom: 0;
   width: 100%;
+    -webkit-app-region: no-drag;
+
 }
 .home-section{
   position: relative;
@@ -114,6 +130,7 @@
   align-items: center;
   font-size: 24px;
   font-weight: 500;
+  -webkit-app-region: no-drag;
 
 }
 .titleBarBtns > .topBtn{
@@ -126,29 +143,40 @@
   background-position: center;
   transition: 0.2s;
   cursor: pointer;
-
-  
+    -webkit-app-region: no-drag;
 }
 .titleBarBtns > .topBtn:hover{
   background-color: rgb(65, 109, 109);
+    -webkit-app-region: no-drag;
+
   
 }
 .titleBarBtns > .topBtn:active{
   background-color: #4F9FEE;
+    -webkit-app-region: no-drag;
+
 }
 .titleBarBtns > .minimizeBtn{
   padding-left: 5px;
   position: relative;
   background-image: url('../../../main-page/icons/icon_minimize.png');
+    -webkit-app-region: no-drag;
+
 }
 .titleBarBtns > .maximizeBtn{
   background-image: url('../../../main-page/icons/icon_maximize.png');
+    -webkit-app-region: no-drag;
+
 }
 .titleBarBtns > .restoreBtn{
   background-image: url('../../../main-page/icons/icon_restore.png');
+    -webkit-app-region: no-drag;
+
 }
 .titleBarBtns > .closeBtn{
   background-image: url('../../../main-page/icons/icon_close.png');
+    -webkit-app-region: no-drag;
+
 }
 nav .sidebar-button i{
   font-size: 35px;
@@ -161,6 +189,8 @@ nav .sidebar-button i{
   max-width: 350px;
   width: 100%;
   margin: 0 20px;  
+    -webkit-app-region: no-drag;
+
     
 }
 nav .search-box input{
@@ -174,6 +204,8 @@ nav .search-box input{
   padding: 0 15px;
   color: #5B9494;
   font-weight: 800;
+    -webkit-app-region: no-drag;
+
 }
 nav .search-box .bx-search{
   position: absolute;
@@ -189,6 +221,8 @@ nav .search-box .bx-search{
   color: #5B9494;
   font-size: 22px;
   transition: all 0.4 ease;
+    -webkit-app-region: no-drag;
+
 }
 .home-section nav .profile-details{
   display: flex;
@@ -199,13 +233,18 @@ nav .search-box .bx-search{
   height: 50px;
   min-width: 190px;
   padding: 0 15px 0 2px;
+    -webkit-app-region: no-drag;
+
   position: absolute; right: 150px
+  
 }
 nav .profile-details img{
   height: 40px;
   width: 40px;
   border-radius: 6px;
   object-fit: cover;
+    -webkit-app-region: no-drag;
+
 }
 nav .profile-details .admin_name{
   font-size: 15px;
@@ -214,11 +253,15 @@ nav .profile-details .admin_name{
   margin: 0 10px;
   white-space: nowrap;
   position: absolute; 
+    -webkit-app-region: no-drag;
+
 }
 nav .profile-details i{
   font-size: 25px;
   color: #5B9494;
   position: absolute; right:0px;
+    -webkit-app-region: no-drag;
+
 }
 .home-section .home-content{
   position: relative;
@@ -335,6 +378,8 @@ nav .profile-details i{
 .sales-boxes .userViewBtns{
   background-color: transparent;
   position: relative;
+    -webkit-app-region: no-drag;
+
 }
 .userViewBtns .editBtn{
   background-color: darkslategray;
@@ -346,6 +391,8 @@ nav .profile-details i{
   font-weight: 800;
   opacity: 90%;
   margin-left: 49%
+    -webkit-app-region: no-drag;
+
 }
 .sales-boxes .userViewBtns .createBtn{
   background-color: darkslategray;
@@ -359,6 +406,8 @@ nav .profile-details i{
   top: 150%;
   margin-left: 53%;
   margin-top: 70%;
+    -webkit-app-region: no-drag;
+
 }
 .userViewBtns .deleteBtn{
   background-color: darkslategray;
@@ -370,6 +419,8 @@ nav .profile-details i{
   border-radius: 10px;
   font-weight: 800;
   opacity: 90%;
+    -webkit-app-region: no-drag;
+
 }
 .sales-boxes .sales-details li.topic{
   font-size: 20px;
@@ -486,6 +537,8 @@ nav .profile-details i{
   font-weight: 800;
   width: 10%;
   color: #5B9494; 
+    -webkit-app-region: no-drag;
+
 }
 .background-right{
   background: rgb(26, 43, 43);
@@ -500,6 +553,8 @@ nav .profile-details i{
   width: 100%;
   position: relative;
   line-height: 35px;
+    -webkit-app-region: no-drag;
+
 }
  .deleteBtn{
   position:absolute;
@@ -514,9 +569,13 @@ nav .profile-details i{
   border: 2px solid rgb(65, 109, 109);
   cursor: pointer;
   display: inline-block;
+    -webkit-app-region: no-drag;
+
 }
 .deleteBtn:hover{
   background-color: #5B9494;
+    -webkit-app-region: no-drag;
+
 }
  .editBtn{
   position:absolute;
@@ -531,10 +590,14 @@ nav .profile-details i{
   border-radius: 12px;
   border: 2px solid rgb(65, 109, 109);
   cursor: pointer;
+    -webkit-app-region: no-drag;
+
 }
 .editBtn:hover{
   background-color: rgb(65, 109, 109);
   background-color: #5B9494;
+    -webkit-app-region: no-drag;
+
 }
 .createBtn{
   position: absolute;
@@ -548,9 +611,13 @@ nav .profile-details i{
   border: 2px solid rgb(65, 109, 109);
   cursor: pointer;
   display: inline-block;
+    -webkit-app-region: no-drag;
+
 }
 .createBtn:hover{
   background-color: rgb(65, 109, 109);
+    -webkit-app-region: no-drag;
+
 }
 .createUser{
   background: rgb(26, 43, 43);
@@ -560,10 +627,14 @@ nav .profile-details i{
   width: 100%;
   box-sizing: border-box;
   padding-bottom: 20px;
+    -webkit-app-region: no-drag;
+
 }
 .createUser .title{
   margin-right: 50px;
   font-size: 20px;
+    -webkit-app-region: no-drag;
+
 }
 .search-box .nameTxtField {
   background-color: darkslategray; 
@@ -574,6 +645,8 @@ nav .profile-details i{
   border: 2px solid rgb(65, 109, 109);
   height: 35px;
   font-size: 20px;
+    -webkit-app-region: no-drag;
+
 }
 .search-box .descriptionTxtField {
   background-color: darkslategray; 
@@ -585,6 +658,8 @@ nav .profile-details i{
   height: 115px;
   font-size: 20px;
   resize: none;
+    -webkit-app-region: no-drag;
+
 }
 .search-box .shortDescriptionTxtField {
   background-color: darkslategray; 
@@ -596,6 +671,8 @@ nav .profile-details i{
   height: 35px;
   font-size: 20px;
   resize: none;
+    -webkit-app-region: no-drag;
+
 }
 .projectName{
   position: relative;
@@ -613,13 +690,19 @@ nav .profile-details i{
   text-align:left;
   margin-bottom: 4px;
   line-height: 25px;
+    -webkit-app-region: no-drag;
+
 }
 .projectName:hover{
   background-color: #5B9494;
+    -webkit-app-region: no-drag;
+
 }
 .dropdown {
   position: relative;
   display: inline-block;
+    -webkit-app-region: no-drag;
+
 }
 .dropbtnType{
   position: absolute;
@@ -633,9 +716,13 @@ nav .profile-details i{
   cursor: pointer;
   display: inline-block;
   bottom:-7px;
+    -webkit-app-region: no-drag;
+
 }
 .dropbtnType:hover{
   background-color: rgb(65, 109, 109);
+    -webkit-app-region: no-drag;
+
 }
 .dropbtnPrio{
   position: absolute;
@@ -650,9 +737,13 @@ nav .profile-details i{
   display: inline-block;
   bottom: -7px;
   right: -289px;
+    -webkit-app-region: no-drag;
+
 }
 .dropbtnPrio:hover{
   background-color: rgb(65, 109, 109);
+    -webkit-app-region: no-drag;
+
 }
 .selectProject{
   position: absolute;
@@ -667,9 +758,13 @@ nav .profile-details i{
   display: inline-block;
   bottom: -7px;
   right: -418px;
+    -webkit-app-region: no-drag;
+
 }
 .selectProject:hover{
   background-color: rgb(65, 109, 109);
+    -webkit-app-region: no-drag;
+
 }
 .selectUser{
   position: absolute;
@@ -684,7 +779,11 @@ nav .profile-details i{
   display: inline-block;
   bottom: -18px;
   right: -545px;
+    -webkit-app-region: no-drag;
+
 }
 .selectUser:hover{
   background-color: rgb(65, 109, 109);
+    -webkit-app-region: no-drag;
+
 }
