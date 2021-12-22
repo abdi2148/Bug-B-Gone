@@ -8,19 +8,18 @@ const getAllUsers = await window.api.getAllUsers();
 
 console.log(getAllUsers);
 
-var table = document.getElementById("post_body");
+var table = document.getElementById("user-list-view");
 table.innerHTML="";
-var tr="";
+   var tr = "";
 getAllUsers.forEach(user=>{
 
-   tr+='<tr type="button" onclick="">';
-   tr+='<td class="bugName" value="placeholder">'+ user.email +'</td>'
-   +'<td class="type" value="placeholder">'+ user.id +'</td>'
-   +'<td class="prioity" value="placeholder">'+ user.name +'</td>'
-   +'<td class="short_description" value="placeholder">' + user.password + '</td>';
+   tr+=' <div class="projectName"name="ProjectName" type="button" value="placeholder">'+ user.name;
+   tr+=' <a href="../edit-view/edit-user.html?userID = '+ user.id +'">'
+   +' <input class="editBtn" onclick="execute('+ user.id +')" type="button" value="Edit"  >'
+   +'<input class="deleteBtn" onclick="execute(document.getElementById('+ user.id +').value)" type="button" value="Delete" >'
+   +' </a>';
 
-   tr+='</tr>';
-
+   tr+='</div>';
 })
 table.innerHTML+=tr;
 

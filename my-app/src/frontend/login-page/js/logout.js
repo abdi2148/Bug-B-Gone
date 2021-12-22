@@ -1,4 +1,4 @@
-const form = document.querySelector('#submitlogin');
+const form = document.querySelector('#submitlogout');
 
 
 form.addEventListener('submit', (event) => {
@@ -14,17 +14,15 @@ form.addEventListener('submit', (event) => {
   }
 
 
-  signIn(objectToPass);
+  log_out(objectToPass);
 
 });
 
 
-async function signIn(data){
+async function log_out(data){
 
-    const login = await window.api.login(data);
+    const logout = await window.api.logout(data);
     
-  console.log(login.error);
-  if(!login.error)
-    window.location.href="../main-page/main-page.html";
-
+    console.log(logout);
+    
 }

@@ -24,6 +24,8 @@ firebaseAPP.initializeApp
   appId: "1:531503281471:web:63354aa776fc06317fcf8a"
 });
 
+let user = {};
+
 function createWindow () {
     const win = new BrowserWindow({
     width: 1250,
@@ -47,16 +49,17 @@ function createWindow () {
     }
 })
 
-    win.loadFile('src/frontend/main-page/main-page.html')
+    win.loadFile('src/frontend/login-page/login-page.html')
     win.setBackgroundColor('#343B48')
 
     //// CLOSE APP
-    ipc.handle('minimizeApp',async ()=>{
+    ipc.handle('minimizeApp', async () => {
         console.log('Clicked on Minimize Btn')
         win.minimize()
     })
   
-      ipc.handle('login:call', async (event, ...args) =>{
+      // Login Call
+    ipc.handle('login:call', async (event, ...args) =>{
 
         var userCredential = await auth.signInWithEmailAndPassword(auth.getAuth(),args[0]['username'], args[0]['password'])
           .catch((error) => {
@@ -65,10 +68,20 @@ function createWindow () {
         if (auth.getAuth().currentUser == null) {
           return { error: 'wrong user credentials' };
         } else {
-          return { id: auth.getAuth().currentUser.uid, email: auth.getAuth().currentUser.email };
+          user = { id: auth.getAuth().currentUser.uid, email: auth.getAuth().currentUser.email };
+          return user;
+
         }
     })
-
+  
+    ipc.handle('logout:call', async (event) =>{
+      user = {};
+      return True;
+    })
+  
+    ipc.handle('getAuthUser:call', async (event) =>{
+      return user;
+    })
     //Bug calls
     ipc.handle('get-bugs:call', async () => {
       const allBugs = await dataController.getAllBugs();
