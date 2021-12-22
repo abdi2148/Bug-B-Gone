@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <link href="../login-page/login-page.css" rel='stylesheet' type='text/css'>
 <script defer src="js/login.js"></script>
+<script defer src="../../frontend/common_js/appFunctions.js"></script>
 
+
+        <div class="titleBarBtns">
+          <button id="minimizeBtn" class="topBtn minimizeBtn" title="Minimize"></button>
+          <button id="maxResBtn" class="topBtn maximizeBtn" title="Maximize"></button>
+          <button id="closeBtn" class="topBtn closeBtn" title="Close"></button>
+        </div>
+        
+<body style="-webkit-app-region: drag">
 <div class="login">
   <h2 style="margin-left: 22%; color: rgb(26, 43, 43);" class="active"> sign in </h2>
   <form id="submitlogin">
@@ -16,4 +25,6 @@
       Sign In
     </button>
   </form>
+  
 </div>
+</body>
