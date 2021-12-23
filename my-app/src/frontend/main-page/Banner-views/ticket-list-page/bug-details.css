@@ -733,7 +733,7 @@ nav .profile-details i{
   cursor: pointer;
   display: inline-block;
   bottom:-7px;
-    -webkit-app-region: no-drag;
+  -webkit-app-region: no-drag;
 
 }
 .dropbtnType:hover{

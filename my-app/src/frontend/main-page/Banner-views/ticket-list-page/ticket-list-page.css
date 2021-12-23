@@ -251,6 +251,20 @@ nav .sidebar-button i {
   overflow: auto;
   color: #5b9494;
 }
+.createBtn {
+  position: absolute;
+  right: 45px;
+  color: rgb(26, 43, 43);
+  background: darkslategray;
+  font-weight: 800;
+  font-size: 20px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  border: 2px solid rgb(65, 109, 109);
+  cursor: pointer;
+  display: inline-block;
+  -webkit-app-region: no-drag;
+}
 .createViewLeft {
   width: 100%;
   position: relative;
@@ -528,13 +542,36 @@ nav .profile-details i {
 }
 
 .dropbtnprojectSearch {
+  background-color: darkslategray;
+  font-weight: 800;
+  color: #5b9494;
+  border-radius: 6px;
+  height: 43px;
+  font-size: 18px;
+  border-radius: 12px;
+  border: 2px solid rgb(65, 109, 109);
+  padding: 4px 12px;
   -webkit-app-region: no-drag;
+  width: 180px;
 }
 
 .dropbtn {
   -webkit-app-region: no-drag;
 }
-
+.dropbtnType{
+  position: absolute;
+  background-color: darkslategray;
+  font-weight: 800;
+  color: #5b9494;
+  border-radius: 6px;
+  height: 43px;
+  font-size: 18px;
+  margin-left: 200px;
+  border-radius: 12px;
+  border: 2px solid rgb(65, 109, 109);
+  padding: 4px 12px;
+  -webkit-app-region: no-drag;
+}
 .searchBoxList input {
   position: absolute;
   background-color: darkslategray;

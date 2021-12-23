@@ -28,10 +28,10 @@ let user = {};
 
 function createWindow () {
     const win = new BrowserWindow({
-    width: 1250,
-    height: 680,
-    minWidth: 1300,
-    minHeight: 700,
+    width: 1350,
+    height: 750,
+    minWidth: 1350,
+    minHeight: 750,
     frame: false,
     webPreferences: {
 
@@ -49,7 +49,7 @@ function createWindow () {
     }
 })
 
-    win.loadFile('src/frontend/login-page/login-page.html')
+    win.loadFile('src/frontend/main-page/main-page.html')
     win.setBackgroundColor('#343B48')
 
     //// CLOSE APP
